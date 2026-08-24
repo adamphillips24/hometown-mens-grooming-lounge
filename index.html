@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hometown Men's Grooming Lounge — Stilwell, OK</title>
+<meta name="description" content="Barbershop in Stilwell, Oklahoma. Cuts, beards and straight razor shaves with Adam Phillips and Nick Wallen. Book online in two taps.">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="logo.avif">
+
+<!--
+=====================================================================
+ EDIT HERE — everything you'll ever need to change is in this list.
+=====================================================================
+ PHONE ....... NOT SET. Search: PHONE_HERE  — appears in 3 places:
+               header icon, top strip, Visit section. Change all three.
+ ADAM BOOK ... live (Squire).  Search:  ADAM_BOOKING
+ NICK BOOK ... live (Squire).  Search:  NICK_BOOKING
+ ADAM IG ..... live @thebarber.ap.  Search:  ADAM_IG
+ NICK IG ..... live @nickyb_the_barber.  Search:  NICK_IG
+ PRICES ...... not set yet. Search:  PRICE
+ NO PHOTOS by request — barbers show as initial badges.
+=====================================================================
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#000;
+  --s1:#0d0d0f;
+  --s2:#16161a;
+  --line:rgba(255,255,255,.10);
+  --line2:rgba(255,255,255,.20);
+
+  /* primary — bright gold, not bronze */
+  --gold:#ffc53d;
+  --gold-hi:#ffd873;
+  --gold-d:#a8761a;
+
+  /* secondary */
+  --red:#e63946;
+  --red-hi:#f25058;
+  --red-d:#8f1f29;
+
+  --fg:#f7f5f2;
+  --dim:#8e8b87;
+  --f:'Inter',system-ui,-apple-system,sans-serif;
+  --spring:cubic-bezier(.34,1.56,.64,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);font-family:var(--f);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.w{width:100%;max-width:1020px;margin:0 auto;padding:0 20px}
+
+/* ---------- chunky press buttons ---------- */
+.b{
+  position:relative;display:flex;align-items:center;justify-content:center;gap:8px;
+  width:100%;padding:17px 20px;border-radius:13px;
+  font:800 14.5px/1 var(--f);letter-spacing:.01em;
+  text-decoration:none;border:0;cursor:pointer;
+  -webkit-tap-highlight-color:transparent;
+  transition:transform .13s var(--spring),box-shadow .13s ease,background .18s ease;
+}
+.b-gold{background:var(--gold);color:#1a1200;box-shadow:0 5px 0 var(--gold-d)}
+.b-gold:hover{background:var(--gold-hi)}
+.b-red{background:var(--red);color:#fff;box-shadow:0 5px 0 var(--red-d)}
+.b-red:hover{background:var(--red-hi)}
+.b-gold:active,.b-red:active{transform:translateY(5px);box-shadow:none}
+.b-out{
+  background:transparent;color:var(--fg);
+  box-shadow:inset 0 0 0 1.5px var(--line2);font-weight:700;
+}
+.b-out:hover{box-shadow:inset 0 0 0 1.5px var(--gold);color:var(--gold)}
+.b-out:active{transform:scale(.98)}
+.b svg{flex:none}
+
+/* soft attention pulse on the main CTA only */
+@keyframes glow{0%,100%{box-shadow:0 5px 0 var(--gold-d),0 0 0 0 rgba(255,197,61,0)}50%{box-shadow:0 5px 0 var(--gold-d),0 0 0 11px rgba(255,197,61,.07)}}
+.pulse{animation:glow 3.4s ease-in-out infinite}
+
+/* ---------- header ---------- */
+header{position:sticky;top:0;z-index:70;background:rgba(0,0,0,.9);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:62px;gap:14px}
+.bar .lgo{width:37px;flex:none;border-radius:50%}
+.bar-l{display:flex;align-items:center;gap:11px;min-width:0}
+.bar-t{font:800 14px/1.15 var(--f);letter-spacing:-.02em}
+.bar-t i{display:block;font:600 9.5px/1.4 var(--f);font-style:normal;letter-spacing:.15em;text-transform:uppercase;color:var(--dim);margin-top:3px}
+.bar-r{display:flex;align-items:center;gap:7px;flex:none}
+.ico{
+  width:41px;height:41px;flex:none;border-radius:11px;display:grid;place-items:center;
+  color:var(--fg);text-decoration:none;border:1px solid var(--line);
+  transition:transform .13s var(--spring),border-color .2s,color .2s,background .2s;
+}
+.ico:hover{color:var(--gold);border-color:var(--gold);background:rgba(255,197,61,.08)}
+.ico:active{transform:scale(.92)}
+
+/* utility strip — address + phone, right under the header */
+.util{border-bottom:1px solid var(--line);background:var(--s1)}
+.util-in{display:grid;grid-template-columns:1fr 1fr}
+.util a{
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  padding:13px 10px;text-decoration:none;color:var(--fg);
+  font:600 13px/1.25 var(--f);text-align:center;transition:background .2s,color .2s;
+}
+.util a:first-child{border-right:1px solid var(--line)}
+.util a:hover{background:var(--s2);color:var(--gold)}
+.util svg{flex:none;opacity:.85}
+.util b{font-weight:700;display:block}
+.util i{font-style:normal;font-size:11px;color:var(--dim);display:block;letter-spacing:.03em}
+.util .soon{color:var(--dim)}
+
+.bar-b{font:800 12.5px/1 var(--f);color:#1a1200;background:var(--gold);padding:12px 17px;border-radius:10px;text-decoration:none;white-space:nowrap;box-shadow:0 3px 0 var(--gold-d);transition:transform .13s var(--spring)}
+.bar-b:active{transform:translateY(3px);box-shadow:none}
+
+/* ---------- hero ---------- */
+.hero{position:relative;text-align:center;padding:40px 0 54px;overflow:hidden}
+.hero::before{
+  content:"";position:absolute;left:50%;top:-140px;width:640px;height:640px;
+  transform:translateX(-50%);pointer-events:none;
+  background:radial-gradient(circle,rgba(255,197,61,.13),transparent 66%);
+}
+.hero .w{position:relative}
+.lgo{background:url(logo.avif) center/contain no-repeat;aspect-ratio:1}
+.logo{width:min(292px,72vw);margin:0 auto 24px;animation:float 6.5s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+.tagline{font:800 11px/1.8 var(--f);letter-spacing:.21em;text-transform:uppercase;color:var(--gold);margin-bottom:15px}
+.hero h1{font:900 clamp(31px,7.6vw,50px)/1.1 var(--f);letter-spacing:-.035em;margin-bottom:13px}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero p{color:var(--dim);font-size:16.5px;max-width:37ch;margin:0 auto 28px}
+.pick{font:800 10.5px/1 var(--f);letter-spacing:.21em;text-transform:uppercase;color:var(--dim);margin-bottom:12px}
+.hero-b{display:grid;gap:11px;max-width:340px;margin:0 auto}
+
+/* ---------- funnel steps ---------- */
+.steps{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--s1);padding:34px 0}
+.steps-in{display:grid;gap:20px}
+.step{display:flex;align-items:flex-start;gap:14px}
+.num{
+  flex:none;width:38px;height:38px;border-radius:50%;
+  display:grid;place-items:center;font:900 15px/1 var(--f);
+  background:rgba(255,197,61,.12);color:var(--gold);
+  box-shadow:inset 0 0 0 1.5px rgba(255,197,61,.32);
+}
+.step h4{font:800 15.5px/1.3 var(--f);letter-spacing:-.015em;margin-bottom:3px}
+.step p{font-size:14.5px;color:var(--dim);line-height:1.55}
+
+/* ---------- sections ---------- */
+section{padding:56px 0;border-top:1px solid var(--line)}
+.kicker{font:800 10.5px/1 var(--f);letter-spacing:.21em;text-transform:uppercase;color:var(--red);margin-bottom:13px}
+h2{font:900 clamp(27px,5.8vw,38px)/1.13 var(--f);letter-spacing:-.032em;margin-bottom:12px}
+.sub{color:var(--dim);font-size:16px;max-width:52ch}
+
+/* ---------- barbers ---------- */
+.crew{display:grid;gap:16px;margin-top:30px}
+.c{
+  background:var(--s1);border:1px solid var(--line);border-radius:18px;overflow:hidden;
+  transition:transform .3s var(--spring),border-color .3s ease,box-shadow .3s ease;
+}
+.c:hover{transform:translateY(-6px);border-color:rgba(255,197,61,.4);box-shadow:0 16px 40px -18px rgba(255,197,61,.3)}
+.c.nick:hover{border-color:rgba(230,57,70,.45);box-shadow:0 16px 40px -18px rgba(230,57,70,.32)}
+/* initial badge instead of a photo */
+.mono{display:flex;align-items:center;gap:15px;margin-bottom:18px}
+.mono i{
+  width:64px;height:64px;flex:none;border-radius:50%;font-style:normal;
+  display:grid;place-items:center;font:900 21px/1 var(--f);letter-spacing:.01em;
+}
+.m-gold{background:rgba(255,197,61,.13);color:var(--gold);box-shadow:inset 0 0 0 2px rgba(255,197,61,.36)}
+.m-red{background:rgba(230,57,70,.15);color:#f57a83;box-shadow:inset 0 0 0 2px rgba(230,57,70,.42)}
+.mono .tag2{margin-bottom:7px}
+.mono h3{margin-bottom:0}
+.cb{padding:24px 21px 25px}
+.tag2{display:inline-block;font:800 10px/1 var(--f);letter-spacing:.15em;text-transform:uppercase;padding:7px 11px;border-radius:20px;margin-bottom:12px}
+.t-gold{background:rgba(255,197,61,.14);color:var(--gold)}
+.t-red{background:rgba(230,57,70,.17);color:#f57a83}
+.c h3{font:900 27px/1.1 var(--f);letter-spacing:-.032em;margin-bottom:14px}
+.days{display:flex;align-items:center;gap:9px;font-size:15px;font-weight:500;background:var(--s2);border-radius:10px;padding:12px 14px;margin-bottom:17px}
+.days svg{flex:none;opacity:.8}
+.cb-b{display:grid;gap:10px}
+.ig{display:flex;align-items:center;justify-content:center;gap:8px;font:600 13px/1 var(--f);color:var(--dim);text-decoration:none;padding:14px;border:1px solid var(--line);border-radius:11px;transition:.2s}
+.ig:hover{color:var(--fg);border-color:var(--line2);background:var(--s2)}
+
+/* ---------- services ---------- */
+.svc{margin-top:26px;border-top:1px solid var(--line)}
+.svc div{display:flex;align-items:baseline;justify-content:space-between;gap:18px;padding:16px 10px 16px 2px;border-bottom:1px solid var(--line);transition:background .2s,padding-left .2s}
+.svc div:hover{background:var(--s1);padding-left:10px}
+.svc span:first-child{font-size:16px;font-weight:600}
+.svc span:last-child{font:800 15px/1 var(--f);color:var(--gold);white-space:nowrap}
+.hint{margin-top:18px;font-size:13.5px;color:#615e5a}
+
+/* ---------- reviews ---------- */
+.revs{display:grid;gap:13px;margin-top:28px}
+.r{background:var(--s1);border:1px solid var(--line);border-radius:15px;padding:22px 20px;position:relative;transition:transform .3s var(--spring),border-color .3s}
+.r:hover{transform:translateY(-4px);border-color:var(--line2)}
+.st{color:var(--gold);letter-spacing:2px;font-size:13px;margin-bottom:11px}
+.r p{font-size:15.5px;color:#d8d4ce;margin-bottom:13px}
+.r cite{font:800 10.5px/1 var(--f);font-style:normal;letter-spacing:.15em;text-transform:uppercase;color:var(--dim)}
+.flag{position:absolute;top:0;right:0;font:800 8.5px/1 var(--f);letter-spacing:.13em;text-transform:uppercase;background:rgba(230,57,70,.2);color:#f57a83;padding:6px 9px;border-radius:0 15px 0 9px}
+
+/* ---------- visit ---------- */
+.visit{display:grid;gap:14px;margin-top:28px}
+.box{background:var(--s1);border:1px solid var(--line);border-radius:18px;padding:23px 20px}
+.box h3{font:800 10.5px/1 var(--f);letter-spacing:.21em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.addr{font:800 19px/1.45 var(--f);letter-spacing:-.02em;margin-bottom:5px}
+.addr-s{font-size:14px;color:var(--dim);margin-bottom:18px}
+.hr div{display:flex;justify-content:space-between;gap:14px;font-size:15px;padding:13px 0;border-bottom:1px solid var(--line)}
+.hr div:last-child{border-bottom:0;padding-bottom:0}
+.hr b{font-weight:700}
+.hr span{color:var(--dim);white-space:nowrap;font-variant-numeric:tabular-nums}
+
+/* ---------- closing CTA ---------- */
+.close{text-align:center;position:relative;overflow:hidden}
+.close::before{content:"";position:absolute;left:50%;top:50%;width:700px;height:400px;transform:translate(-50%,-50%);background:radial-gradient(ellipse,rgba(255,197,61,.11),transparent 66%);pointer-events:none}
+.close .w{position:relative}
+.close h2{margin-bottom:10px}
+.close p{color:var(--dim);font-size:16.5px;max-width:36ch;margin:0 auto 26px}
+.close-b{display:grid;gap:11px;max-width:340px;margin:0 auto}
+
+/* ---------- footer ---------- */
+footer{border-top:1px solid var(--line);padding:40px 0 46px;text-align:center}
+footer .lgo{width:76px;margin:0 auto 16px;border-radius:50%}
+.f1{font:800 15px/1.4 var(--f);letter-spacing:-.02em;margin-bottom:6px}
+.f2{font-size:13.5px;color:#615e5a;line-height:1.9}
+.f3{margin-top:16px;font:800 10px/1 var(--f);letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+
+
+/* ---------- sticky dock ---------- */
+.dock{
+  position:fixed;left:0;right:0;bottom:0;z-index:80;
+  display:grid;grid-template-columns:1fr 1fr;gap:10px;
+  padding:11px 14px calc(11px + env(safe-area-inset-bottom));
+  background:rgba(0,0,0,.95);backdrop-filter:blur(14px);border-top:1px solid var(--line);
+  transform:translateY(120%);transition:transform .4s var(--spring);
+}
+.dock.up{transform:translateY(0)}
+.dock .b{padding:15px 10px;font-size:13.5px;border-radius:11px}
+
+/* ---------- scroll reveal ---------- */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s cubic-bezier(.22,.75,.3,1)}
+.rv.in{opacity:1;transform:none}
+
+@media(min-width:760px){
+  .w{padding:0 34px}
+  .hero{padding:58px 0 76px}
+  section{padding:84px 0}
+  .steps{padding:44px 0}
+  .steps-in{grid-template-columns:repeat(3,1fr);gap:30px}
+  .hero-b,.close-b{grid-template-columns:1fr 1fr;max-width:440px}
+  .crew{grid-template-columns:1fr 1fr;gap:22px}
+  .revs{grid-template-columns:repeat(3,1fr)}
+  .visit{grid-template-columns:1.1fr 1fr}
+  .svc{display:grid;grid-template-columns:1fr 1fr;column-gap:42px}
+  .dock{display:none}
+}
+
+/* respect motion preferences */
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition-duration:.01ms!important}
+  .rv{opacity:1;transform:none}
+  .dock{transform:translateY(0)}
+}
+</style>
+</head>
+<body>
+
+
+<header>
+  <div class="w bar">
+    <div class="bar-l">
+      <div class="lgo" role="img" aria-label="Hometown Men's Grooming Lounge"></div>
+      <div class="bar-t">Hometown<i>Grooming Lounge</i></div>
+    </div>
+    <div class="bar-r">
+      <a class="ico" href="https://maps.google.com/?q=110+W+Maple+St+Stilwell+OK" target="_blank" rel="noopener" aria-label="Directions to the shop" title="Directions">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0116 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      </a>
+      <!-- PHONE_HERE (1 of 3) — change href to tel:+1918XXXXXXX -->
+      <a class="ico" href="#" aria-label="Call the shop" title="Call">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.3-1.2a2 2 0 012.1-.5c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z"/></svg>
+      </a>
+      <a class="bar-b" href="#book">Book</a>
+    </div>
+  </div>
+</header>
+
+<div class="util">
+  <div class="w util-in">
+    <a href="https://maps.google.com/?q=110+W+Maple+St+Stilwell+OK" target="_blank" rel="noopener">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffc53d" stroke-width="1.9"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0116 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      <span><b>110 West Maple</b><i>Stilwell, OK — directions</i></span>
+    </a>
+    <!-- PHONE_HERE (2 of 3) — change href to tel:+1918XXXXXXX and the text below -->
+    <a href="#" class="soon">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e63946" stroke-width="1.9"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.3-1.2a2 2 0 012.1-.5c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z"/></svg>
+      <span><b>Call the shop</b><i>number coming soon</i></span>
+    </a>
+  </div>
+</div>
+
+<!-- ============ 1. HERO ============ -->
+<div class="hero">
+  <div class="w">
+    <div class="lgo logo" role="img" aria-label="Hometown Men's Grooming Lounge, Stilwell Oklahoma"></div>
+    <div class="tagline rv">Look Good · Feel Confident · Stay Local</div>
+    <h1 class="rv">Stilwell's barbershop.<br><em>Book in two taps.</em></h1>
+    <p class="rv">Cuts, beards and straight razor shaves. Two chairs, six days a week.</p>
+
+    <div class="pick rv">Pick your barber</div>
+    <div class="hero-b rv">
+      <!-- ADAM_BOOKING -->
+      <a class="b b-gold pulse" href="https://getsquire.com/booking/book/thebarber-ap-stilwell/barber/adam-phillips/services" target="_blank" rel="noopener">Book Adam</a>
+      <!-- NICK_BOOKING -->
+      <a class="b b-red" href="https://getsquire.com/booking/book/thebarber-ap-stilwell/barber/nick-620/services" target="_blank" rel="noopener">Book Nick</a>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 2. HOW IT WORKS ============ -->
+<div class="steps">
+  <div class="w steps-in">
+    <div class="step rv"><div class="num">1</div><div><h4>Pick your barber</h4><p>Adam or Nick — each keeps his own schedule.</p></div></div>
+    <div class="step rv"><div class="num">2</div><div><h4>Choose your service</h4><p>Cut, beard, shave, or the combo.</p></div></div>
+    <div class="step rv"><div class="num">3</div><div><h4>Show up</h4><p>110 West Maple. We'll have the chair ready.</p></div></div>
+  </div>
+</div>
+
+<!-- ============ 3. BARBERS ============ -->
+<section id="book">
+  <div class="w">
+    <div class="kicker rv">The Chairs</div>
+    <h2 class="rv">Who's cutting</h2>
+    <p class="sub rv">Tap your guy and you'll land straight on his schedule.</p>
+
+    <div class="crew">
+
+      <article class="c rv">
+        <div class="cb">
+          <div class="mono">
+            <i class="m-gold">AP</i>
+            <div>
+              <div class="tag2 t-gold">Owner &amp; Barber</div>
+              <h3>Adam Phillips</h3>
+            </div>
+          </div>
+          <div class="days">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#ffc53d" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            Mon – Fri · 9am – 6pm
+          </div>
+          <div class="cb-b">
+            <!-- ADAM_BOOKING -->
+            <a class="b b-gold" href="https://getsquire.com/booking/book/thebarber-ap-stilwell/barber/adam-phillips/services" target="_blank" rel="noopener">Book Adam</a>
+            <!-- ADAM_IG — live -->
+            <a class="ig" href="https://www.instagram.com/thebarber.ap/" target="_blank" rel="noopener">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+              Instagram
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="c nick rv">
+        <div class="cb">
+          <div class="mono">
+            <i class="m-red">NW</i>
+            <div>
+              <div class="tag2 t-red">Barber &amp; Partner</div>
+              <h3>Nick Wallen</h3>
+            </div>
+          </div>
+          <div class="days">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#e63946" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            Tue – Sat · 9am – 6pm
+          </div>
+          <div class="cb-b">
+            <!-- NICK_BOOKING — slug is "nick-620"; changes if he sets his full name in Squire -->
+            <a class="b b-red" href="https://getsquire.com/booking/book/thebarber-ap-stilwell/barber/nick-620/services" target="_blank" rel="noopener">Book Nick</a>
+            <!-- NICK_IG — live -->
+            <a class="ig" href="https://www.instagram.com/nickyb_the_barber/" target="_blank" rel="noopener">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+              Instagram
+            </a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. SERVICES ============ -->
+<section>
+  <div class="w">
+    <div class="kicker rv">The Work</div>
+    <h2 class="rv">What we do</h2>
+    <p class="sub rv">No upselling. Every cut finishes with a hot towel.</p>
+    <div class="svc rv">
+      <div><span>Haircut</span><span>PRICE</span></div>
+      <div><span>Skin Fade</span><span>PRICE</span></div>
+      <div><span>Beard Trim &amp; Line-Up</span><span>PRICE</span></div>
+      <div><span>Straight Razor Shave</span><span>PRICE</span></div>
+      <div><span>Cut &amp; Beard Combo</span><span>PRICE</span></div>
+      <div><span>Kids · 12 &amp; under</span><span>PRICE</span></div>
+    </div>
+    <p class="hint rv">Placeholder list — swap for the real services and set prices.</p>
+  </div>
+</section>
+
+<!-- ============ 5. PROOF ============ -->
+<section>
+  <div class="w">
+    <div class="kicker rv">Word of Mouth</div>
+    <h2 class="rv">What folks say</h2>
+    <p class="sub rv">Layout only — these get swapped for real Google reviews.</p>
+    <div class="revs">
+      <div class="r rv"><div class="flag">Sample</div><div class="st">★★★★★</div><p>Placeholder review. Real customer words go here once the Google reviews start coming in.</p><cite>Customer name</cite></div>
+      <div class="r rv"><div class="flag">Sample</div><div class="st">★★★★★</div><p>Placeholder review. Three is the right number — more than that and nobody reads them.</p><cite>Customer name</cite></div>
+      <div class="r rv"><div class="flag">Sample</div><div class="st">★★★★★</div><p>Placeholder review. Real names do more work here than anything else on the page.</p><cite>Customer name</cite></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6. VISIT ============ -->
+<section>
+  <div class="w">
+    <div class="kicker rv">Find Us</div>
+    <h2 class="rv">Come see us</h2>
+    <div class="visit">
+      <div class="box rv">
+        <h3>The Shop</h3>
+        <div class="addr">110 West Maple<br>Stilwell, Oklahoma</div>
+        <div class="addr-s">Downtown Stilwell, Adair County</div>
+        <div class="cb-b">
+          <a class="b b-out" href="https://maps.google.com/?q=110+W+Maple+St+Stilwell+OK" target="_blank" rel="noopener">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0116 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Directions
+          </a>
+          <!-- PHONE_HERE (3 of 3) — change href to tel:+1918XXXXXXX and the text to the number -->
+          <a class="b b-out" href="#">Call — number coming soon</a>
+        </div>
+      </div>
+      <div class="box rv">
+        <h3>Hours by Barber</h3>
+        <div class="hr">
+          <div><b>Adam Phillips</b><span>Mon–Fri · 9–6</span></div>
+          <div><b>Nick Wallen</b><span>Tue–Sat · 9–6</span></div>
+        </div>
+        <p class="hint">Listed per barber on purpose — so nobody drives out Monday looking for Nick.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7. CLOSE ============ -->
+<section class="close">
+  <div class="w">
+    <h2 class="rv">Ready for a fresh cut?</h2>
+    <p class="rv">Grab a chair. Takes about twenty seconds.</p>
+    <div class="close-b rv">
+      <!-- ADAM_BOOKING -->
+      <a class="b b-gold" href="https://getsquire.com/booking/book/thebarber-ap-stilwell/barber/adam-phillips/services" target="_blank" rel="noopener">Book Adam</a>
+      <!-- NICK_BOOKING -->
+      <a class="b b-red" href="https://getsquire.com/booking/book/thebarber-ap-stilwell/barber/nick-620/services" target="_blank" rel="noopener">Book Nick</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="w">
+    <div class="lgo"></div>
+    <div class="f1">Hometown Men's Grooming Lounge</div>
+    <div class="f2">110 West Maple · Stilwell, Oklahoma<br>Adam Phillips &amp; Nick Wallen</div>
+    <div class="f3">Look Good · Feel Confident · Stay Local</div>
+  </div>
+</footer>
+
+<div class="dock" id="dock">
+  <a class="b b-gold" href="https://getsquire.com/booking/book/thebarber-ap-stilwell/barber/adam-phillips/services" target="_blank" rel="noopener">Book Adam</a>
+  <a class="b b-red" href="https://getsquire.com/booking/book/thebarber-ap-stilwell/barber/nick-620/services" target="_blank" rel="noopener">Book Nick</a>
+</div>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* fade-up on scroll, staggered within each group */
+  var items = document.querySelectorAll('.rv');
+  if (reduce || !('IntersectionObserver' in window)) {
+    items.forEach(function(el){ el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(!e.isIntersecting) return;
+        var sibs = Array.prototype.slice.call(e.target.parentNode.children)
+                     .filter(function(n){ return n.classList.contains('rv'); });
+        var i = Math.max(0, sibs.indexOf(e.target));
+        e.target.style.transitionDelay = Math.min(i*80, 320) + 'ms';
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      });
+    }, {threshold:.14, rootMargin:'0px 0px -8% 0px'});
+    items.forEach(function(el){ io.observe(el); });
+  }
+
+  /* dock slides up once the hero buttons scroll away */
+  var dock = document.getElementById('dock');
+  var hero = document.querySelector('.hero-b');
+  if (dock && hero) {
+    if (reduce || !('IntersectionObserver' in window)) {
+      dock.classList.add('up');
+    } else {
+      new IntersectionObserver(function(entries){
+        dock.classList.toggle('up', !entries[0].isIntersecting);
+      }, {threshold:0}).observe(hero);
+    }
+  }
+
+  /* pad the body only while the dock is actually showing */
+  var mq = window.matchMedia('(max-width:759px)');
+  function pad(){ document.body.style.paddingBottom = mq.matches ? '84px' : '0'; }
+  pad();
+  (mq.addEventListener ? mq.addEventListener('change', pad) : mq.addListener(pad));
+})();
+</script>
+
+</body>
+</html>
