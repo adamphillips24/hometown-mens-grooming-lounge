@@ -2,399 +2,548 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Hometown Men's Grooming Lounge — Stilwell, OK</title>
 <meta name="description" content="Barbershop in Stilwell, Oklahoma. Cuts, beards and straight razor shaves with Adam Phillips and Nick Wallen. Book online in two taps.">
-<meta name="theme-color" content="#000000">
+<meta name="theme-color" content="#080706">
 <link rel="icon" href="logo.avif">
+<link rel="canonical" href="https://adamphillips24.github.io/hometown-mens-grooming-lounge/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Hometown Men's Grooming Lounge">
+<meta property="og:title" content="Hometown Men's Grooming Lounge — Stilwell, OK">
+<meta property="og:description" content="Cuts, beards and straight razor shaves. Two chairs, six days a week. Book online in two taps.">
+<meta property="og:url" content="https://adamphillips24.github.io/hometown-mens-grooming-lounge/">
+<meta property="og:image" content="https://adamphillips24.github.io/hometown-mens-grooming-lounge/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Hometown Men's Grooming Lounge emblem">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Hometown Men's Grooming Lounge — Stilwell, OK">
+<meta name="twitter:description" content="Cuts, beards and straight razor shaves. Two chairs, six days a week. Book online in two taps.">
+<meta name="twitter:image" content="https://adamphillips24.github.io/hometown-mens-grooming-lounge/og-cover.png">
 
 <!--
 =====================================================================
- EDIT HERE — everything you'll ever need to change is in this list.
+ LIVE SITE. Promoted from preview.html.
+ Previous version is in git history; revert restores it.
 =====================================================================
- PHONE ....... NOT SET. Search: PHONE_HERE  — appears in 3 places:
-               header icon, top strip, Visit section. Change all three.
+ PHONE ....... LIVE: (918) 507-0760, AP's line, in his name.
+               Search: PHONE_HERE — 2 places: AP's barber card and the
+               Visit section. Both are real tel: links. Also in the
+               JSON-LD "telephone" field. Nick has no line of his own.
  ADAM BOOK ... live (Squire).  Search:  ADAM_BOOKING
  NICK BOOK ... live (Squire).  Search:  NICK_BOOKING
  ADAM IG ..... live @thebarber.ap.  Search:  ADAM_IG
  NICK IG ..... live @nickyb_the_barber.  Search:  NICK_IG
- PRICES ...... not set yet. Search:  PRICE
+ PRICES ...... set and confirmed from Squire.
+ ZIP ......... intentionally absent. Not confirmed. Do not add.
  NO PHOTOS by request — barbers show as initial badges.
 =====================================================================
 -->
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --bg:#000;
-  --s1:#0d0d0f;
-  --s2:#16161a;
+  --ink:#080706;
+  --ink2:#100d0b;
+  --wood:#1a1310;
+  --leather:#241a14;
   --line:rgba(255,255,255,.10);
-  --line2:rgba(255,255,255,.20);
+  --line2:rgba(255,255,255,.22);
 
-  /* primary — bright gold, not bronze */
+  --amber:#ffa630;
   --gold:#ffc53d;
   --gold-hi:#ffd873;
-  --gold-d:#a8761a;
+  --gold-d:#8c5f10;
 
-  /* secondary */
   --red:#e63946;
   --red-hi:#f25058;
-  --red-d:#8f1f29;
+  --red-d:#7d1a23;
+
+  --pr:#c8202f;
+  --pb:#1f4fb5;
+  --cream:#f3efe8;
 
   --fg:#f7f5f2;
-  --dim:#8e8b87;
-  --f:'Inter',system-ui,-apple-system,sans-serif;
-  --spring:cubic-bezier(.34,1.56,.64,1);
+  --dim:#b3a99c;
+
+  --disp:'Alfa Slab One',Rockwell,'Roboto Slab',Georgia,serif;
+  --f:Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+
+  --grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.42'/%3E%3C/svg%3E");
 }
-*{margin:0;padding:0;box-sizing:border-box}
+
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{background:var(--bg);color:var(--fg);font-family:var(--f);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-.w{width:100%;max-width:1020px;margin:0 auto;padding:0 20px}
-
-/* ---------- chunky press buttons ---------- */
-.b{
-  position:relative;display:flex;align-items:center;justify-content:center;gap:8px;
-  width:100%;padding:17px 20px;border-radius:13px;
-  font:800 14.5px/1 var(--f);letter-spacing:.01em;
-  text-decoration:none;border:0;cursor:pointer;
-  -webkit-tap-highlight-color:transparent;
-  transition:transform .13s var(--spring),box-shadow .13s ease,background .18s ease;
+body{
+  margin:0;background:var(--ink);color:var(--fg);
+  font-family:var(--f);font-size:16px;line-height:1.5;
+  overflow-x:hidden;
 }
-.b-gold{background:var(--gold);color:#1a1200;box-shadow:0 5px 0 var(--gold-d)}
-.b-gold:hover{background:var(--gold-hi)}
-.b-red{background:var(--red);color:#fff;box-shadow:0 5px 0 var(--red-d)}
-.b-red:hover{background:var(--red-hi)}
-.b-gold:active,.b-red:active{transform:translateY(5px);box-shadow:none}
-.b-out{
-  background:transparent;color:var(--fg);
-  box-shadow:inset 0 0 0 1.5px var(--line2);font-weight:700;
+body::before{
+  content:'';position:fixed;inset:0;z-index:9;pointer-events:none;
+  background-image:var(--grain);opacity:.05;mix-blend-mode:overlay;
 }
-.b-out:hover{box-shadow:inset 0 0 0 1.5px var(--gold);color:var(--gold)}
-.b-out:active{transform:scale(.98)}
-.b svg{flex:none}
+img{max-width:100%;display:block}
+a{color:inherit}
+.w{width:min(1080px,100% - 32px);margin-inline:auto}
+section{position:relative}
 
-/* soft attention pulse on the main CTA only */
-@keyframes glow{0%,100%{box-shadow:0 5px 0 var(--gold-d),0 0 0 0 rgba(255,197,61,0)}50%{box-shadow:0 5px 0 var(--gold-d),0 0 0 11px rgba(255,197,61,.07)}}
-.pulse{animation:glow 3.4s ease-in-out infinite}
-
-/* ---------- header ---------- */
-header{position:sticky;top:0;z-index:70;background:rgba(0,0,0,.9);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-.bar{display:flex;align-items:center;justify-content:space-between;height:62px;gap:14px}
-.bar .lgo{width:37px;flex:none;border-radius:50%}
-.bar-l{display:flex;align-items:center;gap:11px;min-width:0}
-.bar-t{font:800 14px/1.15 var(--f);letter-spacing:-.02em}
-.bar-t i{display:block;font:600 9.5px/1.4 var(--f);font-style:normal;letter-spacing:.15em;text-transform:uppercase;color:var(--dim);margin-top:3px}
-.bar-r{display:flex;align-items:center;gap:7px;flex:none}
-.ico{
-  width:41px;height:41px;flex:none;border-radius:11px;display:grid;place-items:center;
-  color:var(--fg);text-decoration:none;border:1px solid var(--line);
-  transition:transform .13s var(--spring),border-color .2s,color .2s,background .2s;
+/* ============ TYPE ============ */
+h1,h2,h3{margin:0;font-family:var(--disp);font-weight:400;letter-spacing:.01em;line-height:1.02}
+h1{font-size:clamp(34px,10.5vw,78px)}
+h2{font-size:clamp(28px,7vw,50px)}
+h3{font-size:clamp(19px,4.6vw,25px)}
+.kick{
+  font-family:var(--f);font-weight:800;font-size:11px;letter-spacing:.24em;
+  text-transform:uppercase;color:var(--amber);
 }
-.ico:hover{color:var(--gold);border-color:var(--gold);background:rgba(255,197,61,.08)}
-.ico:active{transform:scale(.92)}
-
-/* utility strip — address + phone, right under the header */
-.util{border-bottom:1px solid var(--line);background:var(--s1)}
-.util-in{display:grid;grid-template-columns:1fr 1fr}
-.util a{
-  display:flex;align-items:center;justify-content:center;gap:8px;
-  padding:13px 10px;text-decoration:none;color:var(--fg);
-  font:600 13px/1.25 var(--f);text-align:center;transition:background .2s,color .2s;
+.chrome{
+  background:linear-gradient(177deg,#fffdf8 2%,#cfc7bb 26%,#7e756a 47%,#ded6c8 62%,#fffdf8 82%,#9a9186 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  -webkit-text-fill-color:transparent;
+  filter:drop-shadow(0 2px 0 rgba(0,0,0,.6)) drop-shadow(0 6px 16px rgba(0,0,0,.55));
 }
-.util a:first-child{border-right:1px solid var(--line)}
-.util a:hover{background:var(--s2);color:var(--gold)}
-.util svg{flex:none;opacity:.85}
-.util b{font-weight:700;display:block}
-.util i{font-style:normal;font-size:11px;color:var(--dim);display:block;letter-spacing:.03em}
-.util .soon{color:var(--dim)}
+em{font-style:normal;color:var(--amber)}
 
-.bar-b{font:800 12.5px/1 var(--f);color:#1a1200;background:var(--gold);padding:12px 17px;border-radius:10px;text-decoration:none;white-space:nowrap;box-shadow:0 3px 0 var(--gold-d);transition:transform .13s var(--spring)}
-.bar-b:active{transform:translateY(3px);box-shadow:none}
-
-/* ---------- hero ---------- */
-.hero{position:relative;text-align:center;padding:40px 0 54px;overflow:hidden}
-.hero::before{
-  content:"";position:absolute;left:50%;top:-140px;width:640px;height:640px;
-  transform:translateX(-50%);pointer-events:none;
-  background:radial-gradient(circle,rgba(255,197,61,.13),transparent 66%);
-}
-.hero .w{position:relative}
-.lgo{background:url(logo.avif) center/contain no-repeat;aspect-ratio:1}
-.logo{width:min(292px,72vw);margin:0 auto 24px;animation:float 6.5s ease-in-out infinite}
-@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
-.tagline{font:800 11px/1.8 var(--f);letter-spacing:.21em;text-transform:uppercase;color:var(--gold);margin-bottom:15px}
-.hero h1{font:900 clamp(31px,7.6vw,50px)/1.1 var(--f);letter-spacing:-.035em;margin-bottom:13px}
-.hero h1 em{font-style:normal;color:var(--gold)}
-.hero p{color:var(--dim);font-size:16.5px;max-width:37ch;margin:0 auto 28px}
-.pick{font:800 10.5px/1 var(--f);letter-spacing:.21em;text-transform:uppercase;color:var(--dim);margin-bottom:12px}
-.hero-b{display:grid;gap:11px;max-width:340px;margin:0 auto}
-
-/* ---------- funnel steps ---------- */
-.steps{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--s1);padding:34px 0}
-.steps-in{display:grid;gap:20px}
-.step{display:flex;align-items:flex-start;gap:14px}
-.num{
-  flex:none;width:38px;height:38px;border-radius:50%;
-  display:grid;place-items:center;font:900 15px/1 var(--f);
-  background:rgba(255,197,61,.12);color:var(--gold);
-  box-shadow:inset 0 0 0 1.5px rgba(255,197,61,.32);
-}
-.step h4{font:800 15.5px/1.3 var(--f);letter-spacing:-.015em;margin-bottom:3px}
-.step p{font-size:14.5px;color:var(--dim);line-height:1.55}
-
-/* ---------- sections ---------- */
-section{padding:56px 0;border-top:1px solid var(--line)}
-.kicker{font:800 10.5px/1 var(--f);letter-spacing:.21em;text-transform:uppercase;color:var(--red);margin-bottom:13px}
-h2{font:900 clamp(27px,5.8vw,38px)/1.13 var(--f);letter-spacing:-.032em;margin-bottom:12px}
-.sub{color:var(--dim);font-size:16px;max-width:52ch}
-
-/* ---------- barbers ---------- */
-.crew{display:grid;gap:16px;margin-top:30px}
-.c{
-  background:var(--s1);border:1px solid var(--line);border-radius:18px;overflow:hidden;
-  transition:transform .3s var(--spring),border-color .3s ease,box-shadow .3s ease;
-}
-.c:hover{transform:translateY(-6px);border-color:rgba(255,197,61,.4);box-shadow:0 16px 40px -18px rgba(255,197,61,.3)}
-.c.nick:hover{border-color:rgba(230,57,70,.45);box-shadow:0 16px 40px -18px rgba(230,57,70,.32)}
-/* initial badge instead of a photo */
-.mono{display:flex;align-items:center;gap:15px;margin-bottom:18px}
-.mono i{
-  width:64px;height:64px;flex:none;border-radius:50%;font-style:normal;
-  display:grid;place-items:center;font:900 21px/1 var(--f);letter-spacing:.01em;
-}
-.m-gold{background:rgba(255,197,61,.13);color:var(--gold);box-shadow:inset 0 0 0 2px rgba(255,197,61,.36)}
-.m-red{background:rgba(230,57,70,.15);color:#f57a83;box-shadow:inset 0 0 0 2px rgba(230,57,70,.42)}
-.mono .tag2{margin-bottom:7px}
-.mono h3{margin-bottom:0}
-.cb{padding:24px 21px 25px}
-.tag2{display:inline-block;font:800 10px/1 var(--f);letter-spacing:.15em;text-transform:uppercase;padding:7px 11px;border-radius:20px;margin-bottom:12px}
-.t-gold{background:rgba(255,197,61,.14);color:var(--gold)}
-.t-red{background:rgba(230,57,70,.17);color:#f57a83}
-.c h3{font:900 27px/1.1 var(--f);letter-spacing:-.032em;margin-bottom:14px}
-.days{display:flex;align-items:center;gap:9px;font-size:15px;font-weight:500;background:var(--s2);border-radius:10px;padding:12px 14px;margin-bottom:17px}
-.days svg{flex:none;opacity:.8}
-.cb-b{display:grid;gap:10px}
-.ig{display:flex;align-items:center;justify-content:center;gap:8px;font:600 13px/1 var(--f);color:var(--fg);text-decoration:none;padding:14px;border:1px solid var(--line2);border-radius:11px;background:var(--s2);transition:.2s}
-.ig:hover{border-color:rgba(255,255,255,.38);background:#1e1e23}
-.ig:active{transform:translateY(2px)}
-
-/* ---------- services ---------- */
-.svc{margin-top:26px;border-top:1px solid var(--line)}
-.svc div{display:flex;align-items:baseline;justify-content:space-between;gap:18px;padding:16px 10px 16px 2px;border-bottom:1px solid var(--line);transition:background .2s,padding-left .2s}
-.svc div:hover{background:var(--s1);padding-left:10px}
-.svc span:first-child{font-size:16px;font-weight:600}
-.svc span:last-child{font:800 15px/1 var(--f);color:var(--gold);white-space:nowrap}
-.hint{margin-top:18px;font-size:13.5px;color:#615e5a}
-
-/* ---------- reviews ---------- */
-.revs{display:grid;gap:13px;margin-top:28px}
-.r{background:var(--s1);border:1px solid var(--line);border-radius:15px;padding:22px 20px;position:relative;transition:transform .3s var(--spring),border-color .3s}
-.r:hover{transform:translateY(-4px);border-color:var(--line2)}
-.st{color:var(--gold);letter-spacing:2px;font-size:13px;margin-bottom:11px}
-.r p{font-size:15.5px;color:#d8d4ce;margin-bottom:13px}
-.r cite{font:800 10.5px/1 var(--f);font-style:normal;letter-spacing:.15em;text-transform:uppercase;color:var(--dim)}
-.flag{position:absolute;top:0;right:0;font:800 8.5px/1 var(--f);letter-spacing:.13em;text-transform:uppercase;background:rgba(230,57,70,.2);color:#f57a83;padding:6px 9px;border-radius:0 15px 0 9px}
-
-/* ---------- visit ---------- */
-.visit{display:grid;gap:14px;margin-top:28px}
-.box{background:var(--s1);border:1px solid var(--line);border-radius:18px;padding:23px 20px}
-.box h3{font:800 10.5px/1 var(--f);letter-spacing:.21em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
-.addr{font:800 19px/1.45 var(--f);letter-spacing:-.02em;margin-bottom:5px}
-.addr-s{font-size:14px;color:var(--dim);margin-bottom:18px}
-.hr div{display:flex;justify-content:space-between;gap:14px;font-size:15px;padding:13px 0;border-bottom:1px solid var(--line)}
-.hr div:last-child{border-bottom:0;padding-bottom:0}
-.hr b{font-weight:700}
-.hr span{color:var(--dim);white-space:nowrap;font-variant-numeric:tabular-nums}
-
-/* ---------- closing CTA ---------- */
-.close{text-align:center;position:relative;overflow:hidden}
-.close::before{content:"";position:absolute;left:50%;top:50%;width:700px;height:400px;transform:translate(-50%,-50%);background:radial-gradient(ellipse,rgba(255,197,61,.11),transparent 66%);pointer-events:none}
-.close .w{position:relative}
-.close h2{margin-bottom:10px}
-.close p{color:var(--dim);font-size:16.5px;max-width:36ch;margin:0 auto 26px}
-.close-b{display:grid;gap:11px;max-width:340px;margin:0 auto}
-
-/* ---------- footer ---------- */
-footer{border-top:1px solid var(--line);padding:40px 0 46px;text-align:center}
-footer .lgo{width:76px;margin:0 auto 16px;border-radius:50%}
-.f1{font:800 15px/1.4 var(--f);letter-spacing:-.02em;margin-bottom:6px}
-.f2{font-size:13.5px;color:#615e5a;line-height:1.9}
-.f3{margin-top:16px;font:800 10px/1 var(--f);letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
-
-
-/* ---------- sticky dock ---------- */
-.dock{
-  position:fixed;left:0;right:0;bottom:0;z-index:80;
-  display:grid;grid-template-columns:1fr 1fr;gap:10px;
-  padding:11px 14px calc(11px + env(safe-area-inset-bottom));
-  background:rgba(0,0,0,.95);backdrop-filter:blur(14px);border-top:1px solid var(--line);
-  transform:translateY(120%);transition:transform .4s var(--spring);
-}
-.dock.up{transform:translateY(0)}
-.dock .b{padding:15px 10px;font-size:13.5px;border-radius:11px}
-
-/* ---------- scroll reveal ---------- */
-.rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s cubic-bezier(.22,.75,.3,1)}
+/* ============ REVEAL ============ */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .62s cubic-bezier(.22,.7,.3,1),transform .62s cubic-bezier(.22,.7,.3,1)}
 .rv.in{opacity:1;transform:none}
 
-@media(min-width:760px){
-  .w{padding:0 34px}
-  .hero{padding:58px 0 76px}
-  section{padding:84px 0}
-  .steps{padding:44px 0}
-  .steps-in{grid-template-columns:repeat(3,1fr);gap:30px}
-  .hero-b,.close-b{grid-template-columns:1fr 1fr;max-width:440px}
-  .crew{grid-template-columns:1fr 1fr;gap:22px}
-  .revs{grid-template-columns:repeat(3,1fr)}
-  .visit{grid-template-columns:1.1fr 1fr}
-  .svc{display:grid;grid-template-columns:1fr 1fr;column-gap:42px}
-  .dock{display:none}
+/* ============ BUTTONS ============ */
+.b{
+  position:relative;display:flex;align-items:center;justify-content:center;gap:9px;
+  min-height:56px;padding:0 20px;border-radius:13px;
+  font-family:var(--f);font-weight:800;font-size:16.5px;letter-spacing:.012em;
+  text-decoration:none;color:#170f03;overflow:hidden;isolation:isolate;
+  transition:transform .13s cubic-bezier(.3,1.4,.5,1),box-shadow .2s ease,filter .2s ease;
+  will-change:transform;
+}
+.b svg{flex:none}
+.b::after{
+  content:'';position:absolute;top:-60%;bottom:-60%;width:46px;left:-80px;z-index:2;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.62),transparent);
+  transform:skewX(-18deg);pointer-events:none;
+  animation:sweep 4.6s cubic-bezier(.5,0,.5,1) infinite;
+}
+.b-gold{
+  background:linear-gradient(176deg,var(--gold-hi),var(--gold) 46%,#e0a01f);
+  box-shadow:0 1px 0 rgba(255,255,255,.55) inset,0 -2px 0 var(--gold-d) inset,0 10px 26px -8px rgba(255,180,50,.5),0 3px 10px rgba(0,0,0,.5);
+}
+.b-red{
+  background:linear-gradient(176deg,var(--red-hi),var(--red) 46%,#c22733);color:#fff;
+  box-shadow:0 1px 0 rgba(255,255,255,.35) inset,0 -2px 0 var(--red-d) inset,0 10px 26px -8px rgba(230,57,70,.5),0 3px 10px rgba(0,0,0,.5);
+}
+.b-red::after{animation-delay:.6s}
+.b:active{transform:scale(.967);filter:brightness(1.07)}
+@media (hover:hover){.b:hover{transform:translateY(-2px)}}
+.b-out{
+  background:linear-gradient(176deg,rgba(255,255,255,.09),rgba(255,255,255,.03));
+  color:var(--fg);border:1px solid var(--line2);
+  box-shadow:0 1px 0 rgba(255,255,255,.14) inset,0 6px 18px rgba(0,0,0,.4);
+}
+.b-out::after{display:none}
+@keyframes sweep{
+  0%,58%{left:-80px}
+  78%,100%{left:118%}
 }
 
-/* respect motion preferences */
-@media(prefers-reduced-motion:reduce){
-  *{animation:none!important;transition-duration:.01ms!important}
-  .rv{opacity:1;transform:none}
-  .dock{transform:translateY(0)}
+/* ============ BARBER POLE ============ */
+.pole{
+  position:relative;border-radius:999px;overflow:hidden;
+  background:#1b1815;
+  box-shadow:0 0 0 2px #35302a,0 0 0 3px #0a0908,0 14px 34px rgba(0,0,0,.72);
+}
+.pole i{
+  position:absolute;left:-70%;right:-70%;top:-45%;bottom:-45%;display:block;
+  transform:rotate(22deg);
+  background:repeating-linear-gradient(180deg,
+    var(--pr) 0 15px,var(--cream) 15px 30px,var(--pb) 30px 45px,var(--cream) 45px 60px);
+  animation:roll 2.9s linear infinite;
+}
+@keyframes roll{to{background-position:0 -60px}}
+.pole b{
+  position:absolute;inset:0;border-radius:inherit;display:block;
+  background:linear-gradient(90deg,rgba(0,0,0,.62),rgba(255,255,255,.42) 20%,rgba(255,255,255,.05) 44%,rgba(0,0,0,.34) 74%,rgba(0,0,0,.66));
+  mix-blend-mode:overlay;
+}
+.cap{
+  background:linear-gradient(90deg,#4a453e,#e6e0d5 22%,#8d867b 48%,#f2ece1 68%,#3f3a34);
+  border-radius:4px;box-shadow:0 3px 10px rgba(0,0,0,.6),0 1px 0 rgba(255,255,255,.35) inset;
+}
+
+/* ============ HERO ============ */
+.hero{
+  position:relative;min-height:100svh;display:flex;flex-direction:column;
+  justify-content:center;align-items:center;text-align:center;
+  padding:66px 16px 22px;overflow:hidden;
+  background:
+    radial-gradient(120% 78% at 50% 8%,rgba(255,166,48,.20),transparent 62%),
+    radial-gradient(90% 60% at 50% 100%,rgba(255,166,48,.09),transparent 70%),
+    linear-gradient(178deg,#130f0c,var(--ink) 58%);
+}
+.hero::before{
+  content:'';position:absolute;inset:0;pointer-events:none;opacity:.5;
+  background:repeating-linear-gradient(94deg,rgba(0,0,0,0) 0 3px,rgba(0,0,0,.4) 3px 5px,rgba(120,80,40,.06) 5px 11px);
+  mask-image:radial-gradient(70% 70% at 50% 50%,#000,transparent 78%);
+  -webkit-mask-image:radial-gradient(70% 70% at 50% 50%,#000,transparent 78%);
+}
+.hero::after{
+  content:'';position:absolute;inset:0;pointer-events:none;
+  box-shadow:0 0 190px 66px rgba(0,0,0,.82) inset;
+}
+.hero>*{position:relative;z-index:3}
+
+.glow{
+  position:absolute;z-index:1;left:50%;top:26%;width:min(560px,118vw);aspect-ratio:1;
+  transform:translate(-50%,-50%);pointer-events:none;
+  background:radial-gradient(circle,rgba(255,166,48,.34),rgba(255,120,30,.10) 42%,transparent 66%);
+  animation:breathe 7s ease-in-out infinite;
+}
+@keyframes breathe{50%{opacity:.62;transform:translate(-50%,-50%) scale(1.13)}}
+
+.poles{position:absolute;inset:0;z-index:2;pointer-events:none}
+.pw{position:absolute;top:8%;display:flex;flex-direction:column;align-items:center;gap:5px;opacity:.9}
+.pw.l{left:max(10px,4.5vw)}
+.pw.r{right:max(10px,4.5vw)}
+.pw .cap{width:30px;height:9px}
+.pw .pole{width:22px;height:min(212px,26vh)}
+.pw .pole i{animation-duration:3.4s}
+.pw.r .pole i{animation-duration:2.6s}
+@media (max-width:430px){
+  .pw .pole{width:15px;height:min(150px,19vh)}
+  .pw .cap{width:21px;height:7px}
+  .pw{opacity:.72}
+}
+
+.mark{
+  width:clamp(84px,21vw,140px);aspect-ratio:1;margin:0 auto;
+  background:url(logo.avif) center/contain no-repeat;
+  /* logo art sits on a black square; screen drops the box, keeps the chrome.
+     No mask here — the wordmark runs to the edges and any circle clips it. */
+  mix-blend-mode:screen;
+  filter:drop-shadow(0 0 22px rgba(255,166,48,.3)) contrast(1.06) saturate(1.05);
+  animation:rise .9s cubic-bezier(.2,.8,.3,1) both;
+}
+@keyframes rise{from{opacity:0;transform:translateY(16px) scale(.92)}}
+
+.h-kick{margin:13px 0 0;animation:fade .8s .1s both}
+@media (max-width:430px){.h-kick{font-size:9.5px;letter-spacing:.14em}}
+.hero h1{margin:9px 0 0;animation:fade .8s .2s both}
+.h-sub{
+  margin:11px auto 0;max-width:34ch;color:var(--dim);
+  font-size:clamp(13.5px,3.6vw,17px);animation:fade .8s .3s both;
+}
+@keyframes fade{from{opacity:0;transform:translateY(12px)}}
+
+.pick{
+  display:flex;align-items:center;justify-content:center;gap:11px;
+  margin:clamp(16px,4.4vh,30px) 0 11px;
+  font-weight:800;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--dim);
+}
+.pick::before,.pick::after{content:'';height:1px;width:clamp(22px,8vw,58px);background:linear-gradient(90deg,transparent,var(--line2),transparent)}
+
+/* the two hero buttons: no entrance animation, instantly tappable */
+.hb{display:grid;grid-template-columns:1fr 1fr;gap:9px;width:min(430px,100%);margin:0 auto}
+@media (min-width:760px){.hb{width:min(620px,100%);gap:14px}.hb .b{min-height:62px;font-size:18px}}
+@media (max-width:430px){
+  /* drop the icon so "Book Nick Wallen" stays on one line */
+  .hb .b svg{display:none}
+  .hb .b{font-size:15px;padding:0 10px}
+}
+@media (max-width:339px){.hb{grid-template-columns:1fr}}
+
+.scroll-cue{
+  margin-top:clamp(14px,3.4vh,26px);display:flex;flex-direction:column;align-items:center;gap:5px;
+  font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:#7a7268;font-weight:700;
+}
+.scroll-cue span{display:block;width:1px;height:22px;background:linear-gradient(180deg,var(--amber),transparent);animation:cue 1.9s ease-in-out infinite}
+@keyframes cue{50%{transform:scaleY(.42);opacity:.45}}
+
+/* ============ TICKER ============ */
+.tick{
+  border-block:1px solid var(--line);background:linear-gradient(180deg,#151009,#0c0907);
+  overflow:hidden;padding:11px 0;position:relative;
+}
+.tick::before,.tick::after{
+  content:'';position:absolute;top:0;bottom:0;width:70px;z-index:2;pointer-events:none;
+}
+.tick::before{left:0;background:linear-gradient(90deg,var(--ink),transparent)}
+.tick::after{right:0;background:linear-gradient(270deg,var(--ink),transparent)}
+.tick-in{display:flex;width:max-content;animation:march 26s linear infinite}
+.tick-in u{
+  display:flex;align-items:center;gap:22px;padding-right:22px;text-decoration:none;
+  font-family:var(--disp);font-size:14px;letter-spacing:.03em;color:#6f6559;white-space:nowrap;
+}
+.tick-in u s{text-decoration:none;color:var(--amber);opacity:.85}
+@keyframes march{to{transform:translateX(-50%)}}
+
+/* ============ SECTION FRAME ============ */
+.sec{padding:clamp(56px,11vw,104px) 0;position:relative}
+.sec-h{text-align:center;margin-bottom:clamp(28px,6vw,48px)}
+.sec-h h2{margin:9px 0 0}
+.sec-h p{margin:11px auto 0;max-width:46ch;color:var(--dim);font-size:15px}
+
+/* ============ CREW ============ */
+.crew{display:grid;gap:15px;grid-template-columns:1fr}
+@media (min-width:760px){.crew{grid-template-columns:1fr 1fr;gap:20px}}
+.c{
+  position:relative;border-radius:19px;padding:20px;overflow:hidden;
+  background:linear-gradient(172deg,#1d1610,#100c09 62%);
+  border:1px solid var(--line);
+  box-shadow:0 22px 52px -22px rgba(0,0,0,.92),0 1px 0 rgba(255,255,255,.07) inset;
+  transition:transform .3s cubic-bezier(.22,.7,.3,1),box-shadow .3s ease,border-color .3s ease;
+}
+.c::before{
+  content:'';position:absolute;inset:0;pointer-events:none;
+  background-image:var(--grain);opacity:.045;mix-blend-mode:overlay;
+}
+.c::after{
+  content:'';position:absolute;left:0;right:0;top:0;height:3px;
+  background:linear-gradient(90deg,transparent,var(--ac),transparent);
+  opacity:.9;
+}
+.c.gold{--ac:var(--gold)}
+.c.nick{--ac:var(--red)}
+@media (hover:hover){
+  .c:hover{transform:translateY(-5px);border-color:var(--line2);box-shadow:0 30px 64px -22px rgba(0,0,0,.95),0 0 0 1px var(--ac) inset}
+}
+.c-top{display:flex;align-items:center;gap:14px;margin-bottom:16px}
+.badge{
+  flex:none;width:58px;height:58px;border-radius:15px;display:grid;place-items:center;
+  font-family:var(--disp);font-size:20px;letter-spacing:.02em;color:#140d03;
+  position:relative;overflow:hidden;
+}
+.badge.gold{background:linear-gradient(168deg,var(--gold-hi),var(--gold) 45%,#d0921a);box-shadow:0 8px 22px -8px rgba(255,197,61,.6),0 1px 0 rgba(255,255,255,.5) inset}
+.badge.red{background:linear-gradient(168deg,var(--red-hi),var(--red) 45%,#b62531);color:#fff;box-shadow:0 8px 22px -8px rgba(230,57,70,.6),0 1px 0 rgba(255,255,255,.35) inset}
+.badge::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(255,255,255,.4),transparent 46%);
+}
+.tag{
+  display:inline-block;font-size:9.5px;font-weight:800;letter-spacing:.17em;text-transform:uppercase;
+  padding:3.5px 9px;border-radius:999px;margin-bottom:6px;
+}
+.tag.gold{color:var(--gold);background:rgba(255,197,61,.12);border:1px solid rgba(255,197,61,.3)}
+.tag.red{color:var(--red-hi);background:rgba(230,57,70,.12);border:1px solid rgba(230,57,70,.3)}
+.days{
+  display:flex;align-items:center;gap:8px;margin-bottom:16px;padding:10px 13px;
+  border-radius:11px;background:rgba(255,255,255,.035);border:1px solid var(--line);
+  font-size:13.5px;font-weight:600;color:#cec5b9;
+}
+.days svg{flex:none;color:var(--ac)}
+.c-b{display:grid;gap:9px}
+/* IG is a real button, not a caption. Learned the hard way. */
+.ig{
+  display:flex;align-items:center;justify-content:center;gap:8px;min-height:48px;
+  border-radius:12px;text-decoration:none;font-weight:700;font-size:14.5px;
+  color:var(--fg);background:rgba(255,255,255,.06);border:1px solid var(--line2);
+  transition:transform .13s cubic-bezier(.3,1.4,.5,1),background .2s,border-color .2s;
+}
+.ig svg{flex:none;color:var(--ac)}
+.ig:active{transform:scale(.97)}
+@media (hover:hover){.ig:hover{background:rgba(255,255,255,.1);border-color:var(--ac)}}
+
+/* ============ SERVICES ============ */
+.svc{
+  border-radius:19px;overflow:hidden;border:1px solid var(--line);
+  background:linear-gradient(172deg,#17110d,#0c0907);
+  box-shadow:0 22px 52px -24px rgba(0,0,0,.9);
+}
+.svc div{
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding:15px 18px;border-bottom:1px solid rgba(255,255,255,.055);
+  transition:background .22s ease,padding-left .22s ease;
+}
+.svc div:last-child{border-bottom:0}
+.svc div span:first-child{font-weight:600;font-size:15px;color:#e6dfd5}
+.svc div span:last-child{
+  font-family:var(--disp);font-size:16px;color:var(--gold);white-space:nowrap;
+  text-shadow:0 0 18px rgba(255,197,61,.28);
+}
+@media (hover:hover){.svc div:hover{background:rgba(255,166,48,.055);padding-left:23px}}
+.svc-n{margin:13px 0 0;text-align:center;font-size:12.5px;color:#7d7469}
+
+/* ============ VISIT ============ */
+.visit{display:grid;gap:15px;grid-template-columns:1fr}
+@media (min-width:760px){.visit{grid-template-columns:1fr 1fr;gap:20px}}
+.box{
+  border-radius:19px;padding:22px;border:1px solid var(--line);
+  background:linear-gradient(172deg,#17110d,#0c0907);
+  box-shadow:0 22px 52px -24px rgba(0,0,0,.9);
+}
+.box h3{margin-bottom:14px}
+.addr{font-family:var(--disp);font-size:20px;line-height:1.3;color:#e9e2d7}
+.addr-s{margin-top:5px;font-size:13px;color:var(--dim)}
+.box .c-b{margin-top:17px}
+.hr-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+.hr-row:last-of-type{border-bottom:0}
+.hr-row b{font-weight:700;font-size:14.5px}
+.hr-row span{font-size:13.5px;color:var(--dim);font-weight:600}
+.hint{margin:12px 0 0;font-size:12.5px;color:#7d7469;line-height:1.5}
+/* PHONE_HERE (1 of 2) — inert on purpose, no dead href */
+
+/* ============ CLOSE ============ */
+.close{
+  text-align:center;padding:clamp(56px,12vw,108px) 0 clamp(96px,17vw,128px);
+  background:
+    radial-gradient(90% 74% at 50% 100%,rgba(255,166,48,.15),transparent 66%),
+    linear-gradient(180deg,var(--ink),#120e0a);
+  border-top:1px solid var(--line);
+}
+.close .hb{margin-top:24px}
+.foot{padding:22px 0 0;text-align:center;font-size:11.5px;color:#6b6359;line-height:1.7}
+
+/* ============ DOCK ============ */
+.dock{
+  position:fixed;left:0;right:0;bottom:0;z-index:40;
+  padding:9px 14px calc(9px + env(safe-area-inset-bottom));
+  background:linear-gradient(180deg,rgba(10,8,7,.82),rgba(10,8,7,.97));
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-top:1px solid var(--line);
+  display:grid;grid-template-columns:1fr 1fr;gap:9px;
+  transform:translateY(112%);transition:transform .34s cubic-bezier(.22,.7,.3,1);
+}
+.dock.on{transform:none}
+.dock .b{min-height:50px;font-size:14.5px;padding:0 8px;border-radius:11px}
+.dock .b::after{display:none}
+@media (min-width:760px){.dock{max-width:620px;margin-inline:auto;border-radius:16px 16px 0 0;border-inline:1px solid var(--line)}}
+
+/* ============ REDUCED MOTION ============ */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{
+    animation-duration:.001ms!important;animation-iteration-count:1!important;
+    transition-duration:.001ms!important;
+  }
+  .rv{opacity:1!important;transform:none!important}
+  .mark,.h-kick,.hero h1,.h-sub{animation:none!important;opacity:1!important;transform:none!important}
+  .b::after,.scroll-cue span{display:none}
+  .tick-in{animation:none;transform:none}
+  .dock{transition:none}
 }
 </style>
 </head>
+
 <body>
 
-
-<header>
-  <div class="w bar">
-    <div class="bar-l">
-      <div class="lgo" role="img" aria-label="Hometown Men's Grooming Lounge"></div>
-      <div class="bar-t">Hometown<i>Grooming Lounge</i></div>
-    </div>
-    <div class="bar-r">
-      <a class="ico" href="https://maps.google.com/?q=110+W+Maple+St+Stilwell+OK" target="_blank" rel="noopener" aria-label="Directions to the shop" title="Directions">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0116 0z"/><circle cx="12" cy="10" r="3"/></svg>
-      </a>
-      <!-- PHONE_HERE (1 of 3) — change href to tel:+1918XXXXXXX -->
-      <a class="ico" href="#" aria-label="Call the shop" title="Call">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.3-1.2a2 2 0 012.1-.5c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z"/></svg>
-      </a>
-      <a class="bar-b" href="#book">Book</a>
-    </div>
-  </div>
-</header>
-
-<div class="util">
-  <div class="w util-in">
-    <a href="https://maps.google.com/?q=110+W+Maple+St+Stilwell+OK" target="_blank" rel="noopener">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffc53d" stroke-width="1.9"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0116 0z"/><circle cx="12" cy="10" r="3"/></svg>
-      <span><b>110 West Maple</b><i>Stilwell, OK — directions</i></span>
-    </a>
-    <!-- PHONE_HERE (2 of 3) — change href to tel:+1918XXXXXXX and the text below -->
-    <a href="#" class="soon">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e63946" stroke-width="1.9"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.3-1.2a2 2 0 012.1-.5c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z"/></svg>
-      <span><b>Call the shop</b><i>number coming soon</i></span>
-    </a>
-  </div>
-</div>
-
-<!-- ============ 1. HERO ============ -->
+<!-- ======================= HERO ======================= -->
 <div class="hero">
-  <div class="w">
-    <div class="lgo logo" role="img" aria-label="Hometown Men's Grooming Lounge, Stilwell Oklahoma"></div>
-    <div class="tagline rv">Look Good · Feel Confident · Stay Local</div>
-    <h1 class="rv">Stilwell's barbershop.<br><em>Book in two taps.</em></h1>
-    <p class="rv">Cuts, beards and straight razor shaves. Two chairs, six days a week.</p>
+  <div class="glow"></div>
+  <div class="poles" aria-hidden="true">
+    <div class="pw l"><div class="cap"></div><div class="pole"><i></i><b></b></div><div class="cap"></div></div>
+    <div class="pw r"><div class="cap"></div><div class="pole"><i></i><b></b></div><div class="cap"></div></div>
+  </div>
 
-    <div class="pick rv">Pick your barber</div>
-    <div class="hero-b rv">
-      <!-- ADAM_BOOKING -->
-      <a class="b b-gold pulse" href="https://getsquire.com/booking/book/thebarber-ap-stilwell/barber/adam-phillips/services" target="_blank" rel="noopener">Book AP</a>
-      <!-- NICK_BOOKING -->
-      <a class="b b-red" href="https://getsquire.com/booking/book/thebarber-ap-stilwell/barber/nick-620/services" target="_blank" rel="noopener">Book Nick Wallen</a>
+  <div class="mark" role="img" aria-label="Hometown Men's Grooming Lounge"></div>
+  <div class="kick h-kick">Look Good · Feel Confident · Stay Local</div>
+
+  <h1><span class="chrome">Stilwell's barbershop.</span><br><em>Book in two taps.</em></h1>
+  <p class="h-sub">Cuts, beards and straight razor shaves. Two chairs, six days a week.</p>
+
+  <div class="pick">Pick your barber</div>
+
+  <div class="hb">
+    <!-- ADAM_BOOKING -->
+    <a class="b b-gold" href="https://getsquire.com/booking/book/thebarber-ap-stilwell/barber/adam-phillips/services" target="_blank" rel="noopener">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"><path d="M8 2v4M16 2v4M3 9h18"/><rect x="3" y="5" width="18" height="16" rx="2.5"/></svg>
+      Book AP
+    </a>
+    <!-- NICK_BOOKING -->
+    <a class="b b-red" href="https://getsquire.com/booking/book/thebarber-ap-stilwell/barber/nick-620/services" target="_blank" rel="noopener">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"><path d="M8 2v4M16 2v4M3 9h18"/><rect x="3" y="5" width="18" height="16" rx="2.5"/></svg>
+      Book Nick Wallen
+    </a>
+  </div>
+
+  <div class="scroll-cue"><span></span>Services &amp; Hours</div>
+</div>
+
+<!-- ======================= TICKER ======================= -->
+<div class="tick" aria-hidden="true">
+  <div class="tick-in">
+    <u>Haircuts <s>◆</s> Beard Work <s>◆</s> Straight Razor Shaves <s>◆</s> Walk In Friendly <s>◆</s> 110 West Maple <s>◆</s> Stilwell, Oklahoma <s>◆</s> Two Chairs <s>◆</s> Six Days A Week <s>◆</s></u>
+    <u>Haircuts <s>◆</s> Beard Work <s>◆</s> Straight Razor Shaves <s>◆</s> Walk In Friendly <s>◆</s> 110 West Maple <s>◆</s> Stilwell, Oklahoma <s>◆</s> Two Chairs <s>◆</s> Six Days A Week <s>◆</s></u>
+  </div>
+</div>
+
+<!-- ======================= CREW ======================= -->
+<section class="sec">
+  <div class="w">
+    <div class="sec-h">
+      <div class="kick rv">The Chairs</div>
+      <h2 class="rv"><span class="chrome">Who's cutting</span></h2>
+      <p class="rv">Tap your guy and you'll land straight on his schedule.</p>
     </div>
-  </div>
-</div>
-
-<!-- ============ 2. HOW IT WORKS ============ -->
-<div class="steps">
-  <div class="w steps-in">
-    <div class="step rv"><div class="num">1</div><div><h4>Pick your barber</h4><p>Adam or Nick — each keeps his own schedule.</p></div></div>
-    <div class="step rv"><div class="num">2</div><div><h4>Choose your service</h4><p>Cut, beard, shave, or the combo.</p></div></div>
-    <div class="step rv"><div class="num">3</div><div><h4>Show up</h4><p>110 West Maple. We'll have the chair ready.</p></div></div>
-  </div>
-</div>
-
-<!-- ============ 3. BARBERS ============ -->
-<section id="book">
-  <div class="w">
-    <div class="kicker rv">The Chairs</div>
-    <h2 class="rv">Who's cutting</h2>
-    <p class="sub rv">Tap your guy and you'll land straight on his schedule.</p>
 
     <div class="crew">
-
-      <article class="c rv">
-        <div class="cb">
-          <div class="mono">
-            <i class="m-gold">AP</i>
-            <div>
-              <div class="tag2 t-gold">Owner &amp; Barber</div>
-              <h3>Adam Phillips</h3>
-            </div>
+      <article class="c gold rv">
+        <div class="c-top">
+          <div class="badge gold">AP</div>
+          <div>
+            <div class="tag gold">Owner &amp; Barber</div>
+            <h3>Adam Phillips</h3>
           </div>
-          <div class="days">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#ffc53d" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-            Mon – Fri · 9am – 6pm
-          </div>
-          <div class="cb-b">
-            <!-- ADAM_BOOKING -->
-            <a class="b b-gold" href="https://getsquire.com/booking/book/thebarber-ap-stilwell/barber/adam-phillips/services" target="_blank" rel="noopener">Book AP</a>
-            <!-- ADAM_IG — live -->
-            <a class="ig" href="https://www.instagram.com/thebarber.ap/" target="_blank" rel="noopener">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
-              @thebarber.ap
-            </a>
-          </div>
+        </div>
+        <div class="days">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></svg>
+          Mon – Fri · 9am – 6pm
+        </div>
+        <div class="c-b">
+          <!-- ADAM_BOOKING -->
+          <a class="b b-gold" href="https://getsquire.com/booking/book/thebarber-ap-stilwell/barber/adam-phillips/services" target="_blank" rel="noopener">Book AP</a>
+          <!-- PHONE_HERE (1 of 2) — AP's line, registered in his name -->
+          <a class="ig" href="tel:+19185070760">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .3 1.9.6 2.8a2 2 0 01-.5 2.1L8.1 9.8a16 16 0 006 6l1.2-1.1a2 2 0 012.1-.5c.9.3 1.8.5 2.8.6a2 2 0 011.8 2z"/></svg>
+            (918) 507-0760
+          </a>
+          <!-- ADAM_IG -->
+          <a class="ig" href="https://www.instagram.com/thebarber.ap/" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5.2"/><circle cx="12" cy="12" r="4.1"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>
+            @thebarber.ap
+          </a>
         </div>
       </article>
 
       <article class="c nick rv">
-        <div class="cb">
-          <div class="mono">
-            <i class="m-red">NW</i>
-            <div>
-              <div class="tag2 t-red">Barber &amp; Partner</div>
-              <h3>Nick Wallen</h3>
-            </div>
-          </div>
-          <div class="days">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#e63946" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-            Tue – Sat · 9am – 6pm
-          </div>
-          <div class="cb-b">
-            <!-- NICK_BOOKING — slug is "nick-620"; changes if he sets his full name in Squire -->
-            <a class="b b-red" href="https://getsquire.com/booking/book/thebarber-ap-stilwell/barber/nick-620/services" target="_blank" rel="noopener">Book Nick Wallen</a>
-            <!-- NICK_IG — live -->
-            <a class="ig" href="https://www.instagram.com/nickyb_the_barber/" target="_blank" rel="noopener">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
-              @nickyb_the_barber
-            </a>
+        <div class="c-top">
+          <div class="badge red">NW</div>
+          <div>
+            <div class="tag red">Barber</div>
+            <h3>Nick Wallen</h3>
           </div>
         </div>
+        <div class="days">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></svg>
+          Tue – Sat · 9am – 6pm
+        </div>
+        <div class="c-b">
+          <!-- NICK_BOOKING -->
+          <a class="b b-red" href="https://getsquire.com/booking/book/thebarber-ap-stilwell/barber/nick-620/services" target="_blank" rel="noopener">Book Nick Wallen</a>
+          <!-- NICK_IG -->
+          <a class="ig" href="https://www.instagram.com/nickyb_the_barber/" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5.2"/><circle cx="12" cy="12" r="4.1"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>
+            @nickyb_the_barber
+          </a>
+        </div>
       </article>
-
     </div>
   </div>
 </section>
 
-<!-- ============ 4. SERVICES ============ -->
-<section>
+<!-- ======================= SERVICES ======================= -->
+<section class="sec">
   <div class="w">
-    <div class="kicker rv">The Work</div>
-    <h2 class="rv">What we do</h2>
-    <p class="sub rv">No upselling. Every cut finishes with a hot towel.</p>
+    <div class="sec-h">
+      <div class="kick rv">The Menu</div>
+      <h2 class="rv"><span class="chrome">Services</span></h2>
+      <p class="rv">Straight from the book. No surprises at the chair.</p>
+    </div>
+
     <div class="svc rv">
       <div><span>Haircut</span><span>$35</span></div>
       <div><span>Kids Haircut · 12 &amp; under</span><span>$30</span></div>
@@ -407,109 +556,133 @@ footer .lgo{width:76px;margin:0 auto 16px;border-radius:50%}
       <div><span>VIP · Adam</span><span>$65</span></div>
       <div><span>Designs</span><span>$5</span></div>
     </div>
+    <p class="svc-n rv">Exact pricing confirmed on each barber's Squire page at booking.</p>
   </div>
 </section>
 
-<!-- ============ 6. VISIT ============ -->
-<section>
+<!-- ======================= VISIT ======================= -->
+<section class="sec">
   <div class="w">
-    <div class="kicker rv">Find Us</div>
-    <h2 class="rv">Come see us</h2>
+    <div class="sec-h">
+      <div class="kick rv">Find Us</div>
+      <h2 class="rv"><span class="chrome">Come see us</span></h2>
+    </div>
+
     <div class="visit">
       <div class="box rv">
         <h3>The Shop</h3>
         <div class="addr">110 West Maple<br>Stilwell, Oklahoma</div>
         <div class="addr-s">Downtown Stilwell, Adair County</div>
-        <div class="cb-b">
+        <div class="c-b">
           <a class="b b-out" href="https://maps.google.com/?q=110+W+Maple+St+Stilwell+OK" target="_blank" rel="noopener">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0116 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0116 0z"/><circle cx="12" cy="10" r="3"/></svg>
             Directions
           </a>
-          <!-- PHONE_HERE (3 of 3) — change href to tel:+1918XXXXXXX and the text to the number -->
-          <a class="b b-out" href="#">Call — number coming soon</a>
+          <!-- PHONE_HERE — live. AT&T business line, registered to Adam Phillips. -->
+          <a class="b b-out" href="tel:+19185070760">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .3 1.9.6 2.8a2 2 0 01-.5 2.1L8.1 9.8a16 16 0 006 6l1.2-1.1a2 2 0 012.1-.5c.9.3 1.8.5 2.8.6a2 2 0 011.8 2z"/></svg>
+            (918) 507-0760
+          </a>
         </div>
       </div>
+
       <div class="box rv">
         <h3>Hours by Barber</h3>
-        <div class="hr">
-          <div><b>Adam Phillips</b><span>Mon–Fri · 9–6</span></div>
-          <div><b>Nick Wallen</b><span>Tue–Sat · 9–6</span></div>
-        </div>
+        <div class="hr-row"><b>Adam Phillips</b><span>Mon–Fri · 9–6</span></div>
+        <div class="hr-row"><b>Nick Wallen</b><span>Tue–Sat · 9–6</span></div>
         <p class="hint">Listed per barber on purpose — so nobody drives out Monday looking for Nick.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ 7. CLOSE ============ -->
+<!-- ======================= CLOSE ======================= -->
 <section class="close">
   <div class="w">
-    <h2 class="rv">Ready for a fresh cut?</h2>
-    <p class="rv">Grab a chair. Takes about twenty seconds.</p>
-    <div class="close-b rv">
+    <div class="kick rv">Ready When You Are</div>
+    <h2 class="rv"><span class="chrome">Grab the chair.</span></h2>
+    <div class="hb">
       <!-- ADAM_BOOKING -->
       <a class="b b-gold" href="https://getsquire.com/booking/book/thebarber-ap-stilwell/barber/adam-phillips/services" target="_blank" rel="noopener">Book AP</a>
       <!-- NICK_BOOKING -->
       <a class="b b-red" href="https://getsquire.com/booking/book/thebarber-ap-stilwell/barber/nick-620/services" target="_blank" rel="noopener">Book Nick Wallen</a>
     </div>
+    <p class="foot">Hometown Men's Grooming Lounge · 110 West Maple, Stilwell, Oklahoma<br>Booking handled by Squire.</p>
   </div>
 </section>
 
-<footer>
-  <div class="w">
-    <div class="lgo"></div>
-    <div class="f1">Hometown Men's Grooming Lounge</div>
-    <div class="f2">110 West Maple · Stilwell, Oklahoma<br>Adam Phillips &amp; Nick Wallen</div>
-    <div class="f3">Look Good · Feel Confident · Stay Local</div>
-  </div>
-</footer>
-
+<!-- ======================= DOCK ======================= -->
 <div class="dock" id="dock">
+  <!-- ADAM_BOOKING -->
   <a class="b b-gold" href="https://getsquire.com/booking/book/thebarber-ap-stilwell/barber/adam-phillips/services" target="_blank" rel="noopener">Book AP</a>
+  <!-- NICK_BOOKING -->
   <a class="b b-red" href="https://getsquire.com/booking/book/thebarber-ap-stilwell/barber/nick-620/services" target="_blank" rel="noopener">Book Nick Wallen</a>
 </div>
 
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"HairSalon",
+  "name":"Hometown Men's Grooming Lounge",
+  "description":"Barbershop in Stilwell, Oklahoma. Cuts, beards and straight razor shaves.",
+  "image":"https://adamphillips24.github.io/hometown-mens-grooming-lounge/og-cover.png",
+  "url":"https://adamphillips24.github.io/hometown-mens-grooming-lounge/",
+  "telephone":"+1-918-507-0760",
+  "address":{"@type":"PostalAddress","streetAddress":"110 West Maple","addressLocality":"Stilwell","addressRegion":"OK","addressCountry":"US"},
+  "openingHoursSpecification":[
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday"],"opens":"09:00","closes":"18:00"}
+  ],
+  "employee":[
+    {"@type":"Person","name":"Adam Phillips","jobTitle":"Owner & Barber"},
+    {"@type":"Person","name":"Nick Wallen","jobTitle":"Barber"}
+  ],
+  "sameAs":["https://www.instagram.com/thebarber.ap/","https://www.instagram.com/nickyb_the_barber/"]
+}
+</script>
+
 <script>
 (function(){
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  /* fade-up on scroll, staggered within each group */
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var items = document.querySelectorAll('.rv');
+
   if (reduce || !('IntersectionObserver' in window)) {
-    items.forEach(function(el){ el.classList.add('in'); });
+    for (var i=0;i<items.length;i++) items[i].classList.add('in');
   } else {
     var io = new IntersectionObserver(function(entries){
       entries.forEach(function(e){
-        if(!e.isIntersecting) return;
+        if (!e.isIntersecting) return;
         var sibs = Array.prototype.slice.call(e.target.parentNode.children)
-                     .filter(function(n){ return n.classList.contains('rv'); });
+          .filter(function(n){ return n.classList.contains('rv'); });
         var i = Math.max(0, sibs.indexOf(e.target));
-        e.target.style.transitionDelay = Math.min(i*80, 320) + 'ms';
+        e.target.style.transitionDelay = Math.min(i*85, 340) + 'ms';
         e.target.classList.add('in');
         io.unobserve(e.target);
       });
-    }, {threshold:.14, rootMargin:'0px 0px -8% 0px'});
-    items.forEach(function(el){ io.observe(el); });
+    }, {rootMargin:'0px 0px -9% 0px', threshold:.12});
+    for (var j=0;j<items.length;j++) io.observe(items[j]);
   }
 
-  /* dock slides up once the hero buttons scroll away */
+  /* dock appears once the hero's own buttons are gone */
   var dock = document.getElementById('dock');
-  var hero = document.querySelector('.hero-b');
-  if (dock && hero) {
-    if (reduce || !('IntersectionObserver' in window)) {
-      dock.classList.add('up');
-    } else {
-      new IntersectionObserver(function(entries){
-        dock.classList.toggle('up', !entries[0].isIntersecting);
-      }, {threshold:0}).observe(hero);
-    }
+  var hb = document.querySelector('.hero .hb');
+  if (dock && hb && 'IntersectionObserver' in window) {
+    new IntersectionObserver(function(e){
+      dock.classList.toggle('on', !e[0].isIntersecting);
+    }, {threshold:0}).observe(hb);
   }
 
-  /* pad the body only while the dock is actually showing */
-  var mq = window.matchMedia('(max-width:759px)');
-  function pad(){ document.body.style.paddingBottom = mq.matches ? '84px' : '0'; }
-  pad();
-  (mq.addEventListener ? mq.addEventListener('change', pad) : mq.addListener(pad));
+  /* press feedback on every tappable control */
+  if (!reduce && document.body.animate) {
+    document.addEventListener('pointerdown', function(ev){
+      var t = ev.target.closest && ev.target.closest('.b, .ig');
+      if (!t) return;
+      t.animate(
+        [{transform:'scale(1)'},{transform:'scale(.962)'},{transform:'scale(1)'}],
+        {duration:240, easing:'cubic-bezier(.3,1.4,.5,1)'}
+      );
+    }, {passive:true});
+  }
 })();
 </script>
 
