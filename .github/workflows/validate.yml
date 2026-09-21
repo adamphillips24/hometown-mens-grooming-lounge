@@ -1,0 +1,17 @@
+name: Website checks
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify business data, generated page, and booking links
+        run: python3 -m unittest -v
+      - name: Check progressive enhancement syntax
+        run: node --check site.js
