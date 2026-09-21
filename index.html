@@ -1,690 +1,107 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Hometown Men's Grooming Lounge — Stilwell, OK</title>
-<meta name="description" content="Barbershop in Stilwell, Oklahoma. Cuts, beards and straight razor shaves with Adam Phillips and Nick Wallen. Book online in two taps.">
-<meta name="theme-color" content="#080706">
-<link rel="icon" href="logo.avif">
-<link rel="canonical" href="https://adamphillips24.github.io/hometown-mens-grooming-lounge/">
-
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Hometown Men's Grooming Lounge">
-<meta property="og:title" content="Hometown Men's Grooming Lounge — Stilwell, OK">
-<meta property="og:description" content="Cuts, beards and straight razor shaves. Two chairs, six days a week. Book online in two taps.">
-<meta property="og:url" content="https://adamphillips24.github.io/hometown-mens-grooming-lounge/">
-<meta property="og:image" content="https://adamphillips24.github.io/hometown-mens-grooming-lounge/og-cover.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Hometown Men's Grooming Lounge emblem">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Hometown Men's Grooming Lounge — Stilwell, OK">
-<meta name="twitter:description" content="Cuts, beards and straight razor shaves. Two chairs, six days a week. Book online in two taps.">
-<meta name="twitter:image" content="https://adamphillips24.github.io/hometown-mens-grooming-lounge/og-cover.png">
-
-<!--
-=====================================================================
- LIVE SITE. Promoted from preview.html.
- Previous version is in git history; revert restores it.
-=====================================================================
- PHONE ....... LIVE: (918) 507-0760, AP's line, in his name.
-               Search: PHONE_HERE — 2 places: AP's barber card and the
-               Visit section. Both are real tel: links. Also in the
-               JSON-LD "telephone" field. Nick has no line of his own.
- ADAM BOOK ... live (Squire).  Search:  ADAM_BOOKING
- NICK BOOK ... live (Squire).  Search:  NICK_BOOKING
- ADAM IG ..... live @thebarber.ap.  Search:  ADAM_IG
- NICK IG ..... live @nickyb_the_barber.  Search:  NICK_IG
- PRICES ...... set and confirmed from Squire.
- ZIP ......... intentionally absent. Not confirmed. Do not add.
- NO PHOTOS by request — barbers show as initial badges.
-=====================================================================
--->
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-<style>
-:root{
-  --ink:#080706;
-  --ink2:#100d0b;
-  --wood:#1a1310;
-  --leather:#241a14;
-  --line:rgba(255,255,255,.10);
-  --line2:rgba(255,255,255,.22);
-
-  --amber:#ffa630;
-  --gold:#ffc53d;
-  --gold-hi:#ffd873;
-  --gold-d:#8c5f10;
-
-  --red:#e63946;
-  --red-hi:#f25058;
-  --red-d:#7d1a23;
-
-  --pr:#c8202f;
-  --pb:#1f4fb5;
-  --cream:#f3efe8;
-
-  --fg:#f7f5f2;
-  --dim:#b3a99c;
-
-  --disp:'Alfa Slab One',Rockwell,'Roboto Slab',Georgia,serif;
-  --f:Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
-
-  --grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.42'/%3E%3C/svg%3E");
-}
-
-*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{
-  margin:0;background:var(--ink);color:var(--fg);
-  font-family:var(--f);font-size:16px;line-height:1.5;
-  overflow-x:hidden;
-}
-body::before{
-  content:'';position:fixed;inset:0;z-index:9;pointer-events:none;
-  background-image:var(--grain);opacity:.05;mix-blend-mode:overlay;
-}
-img{max-width:100%;display:block}
-a{color:inherit}
-.w{width:min(1080px,100% - 32px);margin-inline:auto}
-section{position:relative}
-
-/* ============ TYPE ============ */
-h1,h2,h3{margin:0;font-family:var(--disp);font-weight:400;letter-spacing:.01em;line-height:1.02}
-h1{font-size:clamp(34px,10.5vw,78px)}
-h2{font-size:clamp(28px,7vw,50px)}
-h3{font-size:clamp(19px,4.6vw,25px)}
-.kick{
-  font-family:var(--f);font-weight:800;font-size:11px;letter-spacing:.24em;
-  text-transform:uppercase;color:var(--amber);
-}
-.chrome{
-  background:linear-gradient(177deg,#fffdf8 2%,#cfc7bb 26%,#7e756a 47%,#ded6c8 62%,#fffdf8 82%,#9a9186 100%);
-  -webkit-background-clip:text;background-clip:text;color:transparent;
-  -webkit-text-fill-color:transparent;
-  filter:drop-shadow(0 2px 0 rgba(0,0,0,.6)) drop-shadow(0 6px 16px rgba(0,0,0,.55));
-}
-em{font-style:normal;color:var(--amber)}
-
-/* ============ REVEAL ============ */
-.rv{opacity:0;transform:translateY(26px);transition:opacity .62s cubic-bezier(.22,.7,.3,1),transform .62s cubic-bezier(.22,.7,.3,1)}
-.rv.in{opacity:1;transform:none}
-
-/* ============ BUTTONS ============ */
-.b{
-  position:relative;display:flex;align-items:center;justify-content:center;gap:9px;
-  min-height:56px;padding:0 20px;border-radius:13px;
-  font-family:var(--f);font-weight:800;font-size:16.5px;letter-spacing:.012em;
-  text-decoration:none;color:#170f03;overflow:hidden;isolation:isolate;
-  transition:transform .13s cubic-bezier(.3,1.4,.5,1),box-shadow .2s ease,filter .2s ease;
-  will-change:transform;
-}
-.b svg{flex:none}
-.b::after{
-  content:'';position:absolute;top:-60%;bottom:-60%;width:46px;left:-80px;z-index:2;
-  background:linear-gradient(100deg,transparent,rgba(255,255,255,.62),transparent);
-  transform:skewX(-18deg);pointer-events:none;
-  animation:sweep 4.6s cubic-bezier(.5,0,.5,1) infinite;
-}
-.b-gold{
-  background:linear-gradient(176deg,var(--gold-hi),var(--gold) 46%,#e0a01f);
-  box-shadow:0 1px 0 rgba(255,255,255,.55) inset,0 -2px 0 var(--gold-d) inset,0 10px 26px -8px rgba(255,180,50,.5),0 3px 10px rgba(0,0,0,.5);
-}
-.b-red{
-  background:linear-gradient(176deg,var(--red-hi),var(--red) 46%,#c22733);color:#fff;
-  box-shadow:0 1px 0 rgba(255,255,255,.35) inset,0 -2px 0 var(--red-d) inset,0 10px 26px -8px rgba(230,57,70,.5),0 3px 10px rgba(0,0,0,.5);
-}
-.b-red::after{animation-delay:.6s}
-.b:active{transform:scale(.967);filter:brightness(1.07)}
-@media (hover:hover){.b:hover{transform:translateY(-2px)}}
-.b-out{
-  background:linear-gradient(176deg,rgba(255,255,255,.09),rgba(255,255,255,.03));
-  color:var(--fg);border:1px solid var(--line2);
-  box-shadow:0 1px 0 rgba(255,255,255,.14) inset,0 6px 18px rgba(0,0,0,.4);
-}
-.b-out::after{display:none}
-@keyframes sweep{
-  0%,58%{left:-80px}
-  78%,100%{left:118%}
-}
-
-/* ============ BARBER POLE ============ */
-.pole{
-  position:relative;border-radius:999px;overflow:hidden;
-  background:#1b1815;
-  box-shadow:0 0 0 2px #35302a,0 0 0 3px #0a0908,0 14px 34px rgba(0,0,0,.72);
-}
-.pole i{
-  position:absolute;left:-70%;right:-70%;top:-45%;bottom:-45%;display:block;
-  transform:rotate(22deg);
-  background:repeating-linear-gradient(180deg,
-    var(--pr) 0 15px,var(--cream) 15px 30px,var(--pb) 30px 45px,var(--cream) 45px 60px);
-  animation:roll 2.9s linear infinite;
-}
-@keyframes roll{to{background-position:0 -60px}}
-.pole b{
-  position:absolute;inset:0;border-radius:inherit;display:block;
-  background:linear-gradient(90deg,rgba(0,0,0,.62),rgba(255,255,255,.42) 20%,rgba(255,255,255,.05) 44%,rgba(0,0,0,.34) 74%,rgba(0,0,0,.66));
-  mix-blend-mode:overlay;
-}
-.cap{
-  background:linear-gradient(90deg,#4a453e,#e6e0d5 22%,#8d867b 48%,#f2ece1 68%,#3f3a34);
-  border-radius:4px;box-shadow:0 3px 10px rgba(0,0,0,.6),0 1px 0 rgba(255,255,255,.35) inset;
-}
-
-/* ============ HERO ============ */
-.hero{
-  position:relative;min-height:100svh;display:flex;flex-direction:column;
-  justify-content:center;align-items:center;text-align:center;
-  padding:66px 16px 22px;overflow:hidden;
-  background:
-    radial-gradient(120% 78% at 50% 8%,rgba(255,166,48,.20),transparent 62%),
-    radial-gradient(90% 60% at 50% 100%,rgba(255,166,48,.09),transparent 70%),
-    linear-gradient(178deg,#130f0c,var(--ink) 58%);
-}
-.hero::before{
-  content:'';position:absolute;inset:0;pointer-events:none;opacity:.5;
-  background:repeating-linear-gradient(94deg,rgba(0,0,0,0) 0 3px,rgba(0,0,0,.4) 3px 5px,rgba(120,80,40,.06) 5px 11px);
-  mask-image:radial-gradient(70% 70% at 50% 50%,#000,transparent 78%);
-  -webkit-mask-image:radial-gradient(70% 70% at 50% 50%,#000,transparent 78%);
-}
-.hero::after{
-  content:'';position:absolute;inset:0;pointer-events:none;
-  box-shadow:0 0 190px 66px rgba(0,0,0,.82) inset;
-}
-.hero>*{position:relative;z-index:3}
-
-.glow{
-  position:absolute;z-index:1;left:50%;top:26%;width:min(560px,118vw);aspect-ratio:1;
-  transform:translate(-50%,-50%);pointer-events:none;
-  background:radial-gradient(circle,rgba(255,166,48,.34),rgba(255,120,30,.10) 42%,transparent 66%);
-  animation:breathe 7s ease-in-out infinite;
-}
-@keyframes breathe{50%{opacity:.62;transform:translate(-50%,-50%) scale(1.13)}}
-
-.poles{position:absolute;inset:0;z-index:2;pointer-events:none}
-.pw{position:absolute;top:8%;display:flex;flex-direction:column;align-items:center;gap:5px;opacity:.9}
-.pw.l{left:max(10px,4.5vw)}
-.pw.r{right:max(10px,4.5vw)}
-.pw .cap{width:30px;height:9px}
-.pw .pole{width:22px;height:min(212px,26vh)}
-.pw .pole i{animation-duration:3.4s}
-.pw.r .pole i{animation-duration:2.6s}
-@media (max-width:430px){
-  .pw .pole{width:15px;height:min(150px,19vh)}
-  .pw .cap{width:21px;height:7px}
-  .pw{opacity:.72}
-}
-
-.mark{
-  width:clamp(84px,21vw,140px);aspect-ratio:1;margin:0 auto;
-  background:url(logo.avif) center/contain no-repeat;
-  /* logo art sits on a black square; screen drops the box, keeps the chrome.
-     No mask here — the wordmark runs to the edges and any circle clips it. */
-  mix-blend-mode:screen;
-  filter:drop-shadow(0 0 22px rgba(255,166,48,.3)) contrast(1.06) saturate(1.05);
-  animation:rise .9s cubic-bezier(.2,.8,.3,1) both;
-}
-@keyframes rise{from{opacity:0;transform:translateY(16px) scale(.92)}}
-
-.h-kick{margin:13px 0 0;animation:fade .8s .1s both}
-@media (max-width:430px){.h-kick{font-size:9.5px;letter-spacing:.14em}}
-.hero h1{margin:9px 0 0;animation:fade .8s .2s both}
-.h-sub{
-  margin:11px auto 0;max-width:34ch;color:var(--dim);
-  font-size:clamp(13.5px,3.6vw,17px);animation:fade .8s .3s both;
-}
-@keyframes fade{from{opacity:0;transform:translateY(12px)}}
-
-.pick{
-  display:flex;align-items:center;justify-content:center;gap:11px;
-  margin:clamp(16px,4.4vh,30px) 0 11px;
-  font-weight:800;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--dim);
-}
-.pick::before,.pick::after{content:'';height:1px;width:clamp(22px,8vw,58px);background:linear-gradient(90deg,transparent,var(--line2),transparent)}
-
-/* the two hero buttons: no entrance animation, instantly tappable */
-.hb{display:grid;grid-template-columns:1fr 1fr;gap:9px;width:min(430px,100%);margin:0 auto}
-@media (min-width:760px){.hb{width:min(620px,100%);gap:14px}.hb .b{min-height:62px;font-size:18px}}
-@media (max-width:430px){
-  /* drop the icon so "Book Nick Wallen" stays on one line */
-  .hb .b svg{display:none}
-  .hb .b{font-size:15px;padding:0 10px}
-}
-@media (max-width:339px){.hb{grid-template-columns:1fr}}
-
-.scroll-cue{
-  margin-top:clamp(14px,3.4vh,26px);display:flex;flex-direction:column;align-items:center;gap:5px;
-  font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:#7a7268;font-weight:700;
-}
-.scroll-cue span{display:block;width:1px;height:22px;background:linear-gradient(180deg,var(--amber),transparent);animation:cue 1.9s ease-in-out infinite}
-@keyframes cue{50%{transform:scaleY(.42);opacity:.45}}
-
-/* ============ TICKER ============ */
-.tick{
-  border-block:1px solid var(--line);background:linear-gradient(180deg,#151009,#0c0907);
-  overflow:hidden;padding:11px 0;position:relative;
-}
-.tick::before,.tick::after{
-  content:'';position:absolute;top:0;bottom:0;width:70px;z-index:2;pointer-events:none;
-}
-.tick::before{left:0;background:linear-gradient(90deg,var(--ink),transparent)}
-.tick::after{right:0;background:linear-gradient(270deg,var(--ink),transparent)}
-.tick-in{display:flex;width:max-content;animation:march 26s linear infinite}
-.tick-in u{
-  display:flex;align-items:center;gap:22px;padding-right:22px;text-decoration:none;
-  font-family:var(--disp);font-size:14px;letter-spacing:.03em;color:#6f6559;white-space:nowrap;
-}
-.tick-in u s{text-decoration:none;color:var(--amber);opacity:.85}
-@keyframes march{to{transform:translateX(-50%)}}
-
-/* ============ SECTION FRAME ============ */
-.sec{padding:clamp(56px,11vw,104px) 0;position:relative}
-.sec-h{text-align:center;margin-bottom:clamp(28px,6vw,48px)}
-.sec-h h2{margin:9px 0 0}
-.sec-h p{margin:11px auto 0;max-width:46ch;color:var(--dim);font-size:15px}
-
-/* ============ CREW ============ */
-.crew{display:grid;gap:15px;grid-template-columns:1fr}
-@media (min-width:760px){.crew{grid-template-columns:1fr 1fr;gap:20px}}
-.c{
-  position:relative;border-radius:19px;padding:20px;overflow:hidden;
-  background:linear-gradient(172deg,#1d1610,#100c09 62%);
-  border:1px solid var(--line);
-  box-shadow:0 22px 52px -22px rgba(0,0,0,.92),0 1px 0 rgba(255,255,255,.07) inset;
-  transition:transform .3s cubic-bezier(.22,.7,.3,1),box-shadow .3s ease,border-color .3s ease;
-}
-.c::before{
-  content:'';position:absolute;inset:0;pointer-events:none;
-  background-image:var(--grain);opacity:.045;mix-blend-mode:overlay;
-}
-.c::after{
-  content:'';position:absolute;left:0;right:0;top:0;height:3px;
-  background:linear-gradient(90deg,transparent,var(--ac),transparent);
-  opacity:.9;
-}
-.c.gold{--ac:var(--gold)}
-.c.nick{--ac:var(--red)}
-@media (hover:hover){
-  .c:hover{transform:translateY(-5px);border-color:var(--line2);box-shadow:0 30px 64px -22px rgba(0,0,0,.95),0 0 0 1px var(--ac) inset}
-}
-.c-top{display:flex;align-items:center;gap:14px;margin-bottom:16px}
-.badge{
-  flex:none;width:58px;height:58px;border-radius:15px;display:grid;place-items:center;
-  font-family:var(--disp);font-size:20px;letter-spacing:.02em;color:#140d03;
-  position:relative;overflow:hidden;
-}
-.badge.gold{background:linear-gradient(168deg,var(--gold-hi),var(--gold) 45%,#d0921a);box-shadow:0 8px 22px -8px rgba(255,197,61,.6),0 1px 0 rgba(255,255,255,.5) inset}
-.badge.red{background:linear-gradient(168deg,var(--red-hi),var(--red) 45%,#b62531);color:#fff;box-shadow:0 8px 22px -8px rgba(230,57,70,.6),0 1px 0 rgba(255,255,255,.35) inset}
-.badge::after{
-  content:'';position:absolute;inset:0;
-  background:linear-gradient(135deg,rgba(255,255,255,.4),transparent 46%);
-}
-.tag{
-  display:inline-block;font-size:9.5px;font-weight:800;letter-spacing:.17em;text-transform:uppercase;
-  padding:3.5px 9px;border-radius:999px;margin-bottom:6px;
-}
-.tag.gold{color:var(--gold);background:rgba(255,197,61,.12);border:1px solid rgba(255,197,61,.3)}
-.tag.red{color:var(--red-hi);background:rgba(230,57,70,.12);border:1px solid rgba(230,57,70,.3)}
-.days{
-  display:flex;align-items:center;gap:8px;margin-bottom:16px;padding:10px 13px;
-  border-radius:11px;background:rgba(255,255,255,.035);border:1px solid var(--line);
-  font-size:13.5px;font-weight:600;color:#cec5b9;
-}
-.days svg{flex:none;color:var(--ac)}
-.c-b{display:grid;gap:9px}
-/* IG is a real button, not a caption. Learned the hard way. */
-.ig{
-  display:flex;align-items:center;justify-content:center;gap:8px;min-height:48px;
-  border-radius:12px;text-decoration:none;font-weight:700;font-size:14.5px;
-  color:var(--fg);background:rgba(255,255,255,.06);border:1px solid var(--line2);
-  transition:transform .13s cubic-bezier(.3,1.4,.5,1),background .2s,border-color .2s;
-}
-.ig svg{flex:none;color:var(--ac)}
-.ig:active{transform:scale(.97)}
-@media (hover:hover){.ig:hover{background:rgba(255,255,255,.1);border-color:var(--ac)}}
-
-/* ============ SERVICES ============ */
-.svc{
-  border-radius:19px;overflow:hidden;border:1px solid var(--line);
-  background:linear-gradient(172deg,#17110d,#0c0907);
-  box-shadow:0 22px 52px -24px rgba(0,0,0,.9);
-}
-.svc div{
-  display:flex;align-items:center;justify-content:space-between;gap:16px;
-  padding:15px 18px;border-bottom:1px solid rgba(255,255,255,.055);
-  transition:background .22s ease,padding-left .22s ease;
-}
-.svc div:last-child{border-bottom:0}
-.svc div span:first-child{font-weight:600;font-size:15px;color:#e6dfd5}
-.svc div span:last-child{
-  font-family:var(--disp);font-size:16px;color:var(--gold);white-space:nowrap;
-  text-shadow:0 0 18px rgba(255,197,61,.28);
-}
-@media (hover:hover){.svc div:hover{background:rgba(255,166,48,.055);padding-left:23px}}
-.svc-n{margin:13px 0 0;text-align:center;font-size:12.5px;color:#7d7469}
-
-/* ============ VISIT ============ */
-.visit{display:grid;gap:15px;grid-template-columns:1fr}
-@media (min-width:760px){.visit{grid-template-columns:1fr 1fr;gap:20px}}
-.box{
-  border-radius:19px;padding:22px;border:1px solid var(--line);
-  background:linear-gradient(172deg,#17110d,#0c0907);
-  box-shadow:0 22px 52px -24px rgba(0,0,0,.9);
-}
-.box h3{margin-bottom:14px}
-.addr{font-family:var(--disp);font-size:20px;line-height:1.3;color:#e9e2d7}
-.addr-s{margin-top:5px;font-size:13px;color:var(--dim)}
-.box .c-b{margin-top:17px}
-.hr-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.06)}
-.hr-row:last-of-type{border-bottom:0}
-.hr-row b{font-weight:700;font-size:14.5px}
-.hr-row span{font-size:13.5px;color:var(--dim);font-weight:600}
-.hint{margin:12px 0 0;font-size:12.5px;color:#7d7469;line-height:1.5}
-/* PHONE_HERE (1 of 2) — inert on purpose, no dead href */
-
-/* ============ CLOSE ============ */
-.close{
-  text-align:center;padding:clamp(56px,12vw,108px) 0 clamp(96px,17vw,128px);
-  background:
-    radial-gradient(90% 74% at 50% 100%,rgba(255,166,48,.15),transparent 66%),
-    linear-gradient(180deg,var(--ink),#120e0a);
-  border-top:1px solid var(--line);
-}
-.close .hb{margin-top:24px}
-.foot{padding:22px 0 0;text-align:center;font-size:11.5px;color:#6b6359;line-height:1.7}
-
-/* ============ DOCK ============ */
-.dock{
-  position:fixed;left:0;right:0;bottom:0;z-index:40;
-  padding:9px 14px calc(9px + env(safe-area-inset-bottom));
-  background:linear-gradient(180deg,rgba(10,8,7,.82),rgba(10,8,7,.97));
-  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
-  border-top:1px solid var(--line);
-  display:grid;grid-template-columns:1fr 1fr;gap:9px;
-  transform:translateY(112%);transition:transform .34s cubic-bezier(.22,.7,.3,1);
-}
-.dock.on{transform:none}
-.dock .b{min-height:50px;font-size:14.5px;padding:0 8px;border-radius:11px}
-.dock .b::after{display:none}
-@media (min-width:760px){.dock{max-width:620px;margin-inline:auto;border-radius:16px 16px 0 0;border-inline:1px solid var(--line)}}
-
-/* ============ REDUCED MOTION ============ */
-@media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  *,*::before,*::after{
-    animation-duration:.001ms!important;animation-iteration-count:1!important;
-    transition-duration:.001ms!important;
-  }
-  .rv{opacity:1!important;transform:none!important}
-  .mark,.h-kick,.hero h1,.h-sub{animation:none!important;opacity:1!important;transform:none!important}
-  .b::after,.scroll-cue span{display:none}
-  .tick-in{animation:none;transform:none}
-  .dock{transition:none}
-}
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hometown Men&#x27;s Grooming Lounge — Stilwell, OK</title><meta name="description" content="Cuts, beards and straight razor shaves in Stilwell, Oklahoma. View services and prices. Book with Adam Phillips or Nick Wallen through Squire."><meta name="theme-color" content="#11130f"><meta name="color-scheme" content="dark light"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="hometown-build" content="9b056c75c6b5">
+<link rel="canonical" href="https://hometownmensgroominglounge.com/"><link rel="icon" href="logo.avif"><link rel="preload" href="logo.avif" as="image" type="image/avif">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Hometown Men&#x27;s Grooming Lounge"><meta property="og:title" content="Hometown Men&#x27;s Grooming Lounge — Stilwell, OK"><meta property="og:description" content="Cuts, beards and straight razor shaves in Stilwell, Oklahoma. View services and prices. Book with Adam Phillips or Nick Wallen through Squire."><meta property="og:url" content="https://hometownmensgroominglounge.com/"><meta property="og:image" content="https://hometownmensgroominglounge.com/og-cover.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Hometown Men's Grooming Lounge emblem"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Hometown Men&#x27;s Grooming Lounge — Stilwell, OK"><meta name="twitter:description" content="Cuts, beards and straight razor shaves in Stilwell, Oklahoma. View services and prices. Book with Adam Phillips or Nick Wallen through Squire."><meta name="twitter:image" content="https://hometownmensgroominglounge.com/og-cover.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,500&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>/* Hometown / premium heritage. Essential content is always visible. */
+:root{--ink:#11130f;--ink-soft:#191c16;--paper:#f3eee3;--paper-deep:#e9e1d1;--brass:#c9aa70;--brass-light:#e5cd9a;--text:#f3eee3;--muted:#b8b8a9;--rule:#414538;--dark-text:#253025;--dark-muted:#5d6355;--red:#98504a;--serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;--sans:'Manrope',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;--space:clamp(24px,5.5vw,88px)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:100px}body{margin:0;background:var(--ink);color:var(--text);font:15px/1.65 var(--sans);-webkit-font-smoothing:antialiased}a{color:inherit;text-underline-offset:5px}button{font:inherit}img{max-width:100%;height:auto;display:block}::selection{background:var(--brass);color:var(--ink)}:focus-visible{outline:3px solid var(--brass-light);outline-offset:5px}button,a{-webkit-tap-highlight-color:transparent}h1,h2,h3,p{margin:0}h1,h2{font-family:var(--serif);font-weight:500;line-height:.95;letter-spacing:-.045em}h2{font-size:clamp(52px,6.8vw,88px)}h3{font-family:var(--serif);font-weight:600;font-size:clamp(30px,3vw,40px);line-height:1.15;letter-spacing:-.02em}.wrap{width:min(1200px,calc(100% - var(--space)*2));margin-inline:auto}.eyebrow{font-size:10px;line-height:1.6;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--brass)}.muted{color:var(--muted)}.sr-only{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.skip{position:fixed;left:16px;top:12px;z-index:100;background:var(--paper);color:var(--ink);padding:12px 20px;transform:translateY(-150%)}.skip:focus{transform:none}.site-header{border-bottom:1px solid var(--rule);position:relative;z-index:10}.header-inner{min-height:100px;display:flex;align-items:center;justify-content:space-between;gap:28px}.wordmark{text-decoration:none;font-weight:700;font-size:18px;letter-spacing:.2em;line-height:1.2}.wordmark small{display:block;font-size:8px;font-weight:500;letter-spacing:.22em;margin-top:7px;color:var(--muted)}.nav{display:flex;gap:32px;align-items:center}.nav a{min-height:44px;display:inline-flex;align-items:center;font-size:12px;font-weight:600;text-decoration:none;padding:10px 0;position:relative}.nav a::after{content:'';height:1px;background:var(--brass);position:absolute;bottom:5px;left:0;right:0;transform:scaleX(0);transform-origin:left;transition:transform .2s}.nav a:hover::after,.nav a[aria-current='location']::after{transform:scaleX(1)}.nav .nav-book{border:1px solid #82704b;padding:10px 18px}.nav .nav-book::after{display:none}.nav .nav-book:hover{background:var(--brass);color:var(--ink)}
+.hero{position:relative;overflow:hidden}.hero-inner{display:grid;grid-template-columns:1.3fr 1fr;align-items:center;min-height:650px;padding-top:74px;padding-bottom:72px;gap:50px}.hero-copy{position:relative;z-index:2}.hero h1{font-size:clamp(78px,9.8vw,142px);margin-top:24px}.hero h1 em{font-weight:400;color:var(--brass-light)}.hero-description{font-size:15px;line-height:1.8;max-width:34ch;margin-top:30px;color:var(--muted)}.hero .booking-pair{margin-top:32px;max-width:480px}.booking-pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}.button{display:flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:14px 20px;border:1px solid var(--brass);background:var(--brass);color:var(--ink);text-decoration:none;font-size:12px;font-weight:750;letter-spacing:.015em;transition:background .18s,color .18s,transform .18s}.button:hover{background:var(--brass-light);border-color:var(--brass-light)}.button:active{transform:translateY(1px)}.button.secondary{background:transparent;color:var(--paper);border-color:#727669}.button.secondary:hover{background:var(--paper);color:var(--ink);border-color:var(--paper)}.button .arrow{width:14px;height:14px;flex:none}.hero-note{font-size:10px;color:var(--muted);margin-top:13px}.hero-art{background:var(--ink);isolation:isolate;position:relative;display:flex;align-items:center;justify-content:center;min-height:380px}.hero-logo{width:350px;mix-blend-mode:screen;position:relative;z-index:2;object-fit:contain}.logo-caption{position:absolute;bottom:0;left:0;right:0;text-align:center;color:var(--muted);font-size:9px;letter-spacing:.27em;text-transform:uppercase}.hero-base{border-top:1px solid var(--rule);padding-block:20px;display:flex;align-items:center;justify-content:space-between;gap:20px}.hero-base p{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}.scroll-link{font-size:11px;text-decoration:none;display:inline-flex;align-items:center;gap:16px;padding:6px 0}.scroll-link svg{width:16px;height:16px;color:var(--brass)}
+/* The original site's signature pole artwork, retained and simplified. */
+.poles{position:absolute;inset:0;pointer-events:none}.pw{position:absolute;top:28%;display:flex;flex-direction:column;align-items:center;gap:4px;opacity:.68}.pw.l{left:0}.pw.r{right:0}.pole{position:relative;width:12px;height:150px;border-radius:999px;overflow:hidden;background:#1b1815;box-shadow:0 0 0 1px #555748}.pole i{position:absolute;left:-70%;right:-70%;top:-45%;bottom:-45%;display:block;transform:rotate(22deg);background:repeating-linear-gradient(180deg,#8a3938 0 15px,#d8d2c2 15px 30px,#3e5268 30px 45px,#d8d2c2 45px 60px);animation:roll 2.4s linear 2}.pole b{position:absolute;inset:0;border-radius:inherit;background:linear-gradient(90deg,rgba(0,0,0,.6),rgba(255,255,255,.35) 20%,transparent 44%,rgba(0,0,0,.3) 74%,rgba(0,0,0,.6))}.cap{width:18px;height:6px;border-radius:2px;background:linear-gradient(90deg,#747466,#d8d2c2,#747466)}@keyframes roll{to{background-position:0 -60px}}
+.section{padding-block:100px}.section-header{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;margin-bottom:42px}.section-header h2{margin-top:16px}.section-header>p{font-size:13px;color:var(--muted);max-width:30ch}.section-number{font-family:var(--serif);font-size:20px;font-style:italic;color:var(--brass);margin-right:14px;letter-spacing:0}.barbers{background:var(--ink-soft);border-top:1px solid var(--rule)}.crew{display:grid;grid-template-columns:1fr 1fr;gap:24px}.barber-card{border:1px solid var(--rule);padding:32px;display:flex;flex-direction:column;position:relative;background:var(--ink-soft)}.barber-card::before{content:'';height:2px;position:absolute;top:-1px;left:32px;width:40px;background:var(--brass)}.barber-card.nick::before{background:#b7766d}.barber-top{display:flex;gap:20px;align-items:center;margin-bottom:24px}.initials{width:58px;height:58px;border:1px solid #716648;display:grid;place-items:center;font-family:var(--serif);font-size:24px;color:var(--brass-light);flex:none}.nick .initials{color:#e1aaa1;border-color:#8a615a}.role{font-size:9px;text-transform:uppercase;letter-spacing:.17em;color:var(--muted);margin-bottom:6px}.barber-hours{border-block:1px solid var(--rule);padding-block:16px;margin-bottom:24px;display:flex;justify-content:space-between;gap:16px;font-size:12px;color:var(--muted)}.barber-actions{display:grid;gap:10px}.barber-actions .button{width:100%}.social-link{display:flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:12px;text-decoration:none;font-size:12px;border:1px solid #5d6253;color:var(--paper);transition:background .18s}.social-link:hover{background:#2d3327}.social-link svg{width:15px;height:15px;flex:none}.barber-footer{margin-top:10px;display:grid;gap:10px}
+.services{background:var(--paper);color:var(--dark-text)}.services .eyebrow,.services .section-number{color:#776035}.services .section-header>p{color:var(--dark-muted)}.menu-wrap{border-top:2px solid #343f2e}.menu{width:100%;border-collapse:collapse;text-align:left}.menu thead th{padding:22px 16px;border-bottom:1px solid #bdb9a8;font-size:10px;text-transform:uppercase;letter-spacing:.12em;font-weight:750;color:var(--dark-muted)}.menu thead th:first-child{padding-left:0}.menu thead th:not(:first-child){text-align:right}.menu .group th{padding:32px 0 13px;color:#74603a;font-size:9px;text-transform:uppercase;letter-spacing:.18em;border-bottom:1px solid #bdb9a8}.menu td,.menu th[scope='row']{padding:18px 16px;border-bottom:1px solid #d6d0c0;font-weight:500;vertical-align:middle}.menu th[scope='row']{padding-left:0;width:64%}.service-name{display:block;font-size:14px;font-weight:650}.service-detail{color:var(--dark-muted);font-size:11px;margin-top:4px;display:block}.menu td{text-align:right;font-family:var(--serif);font-weight:600;font-size:25px;white-space:nowrap;width:18%}.menu td:last-child,.menu thead th:last-child{padding-right:0}.not-offered{font-family:var(--sans);font-size:10px;font-weight:500;color:var(--dark-muted)}.menu tbody tr:not(.group):hover{background:var(--paper-deep)}.menu-foot{display:flex;justify-content:space-between;gap:22px;margin-top:24px;align-items:flex-start}.menu-foot p{font-size:11px;color:var(--dark-muted);max-width:48ch}.menu-foot a{font-size:11px;font-weight:700;white-space:nowrap}.services a:focus-visible{outline-color:#624b20}
+.visit{border-bottom:1px solid var(--rule)}.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}.visit h2{margin-top:16px}.address{font-family:var(--serif);font-size:clamp(32px,3.7vw,48px);line-height:1.18;letter-spacing:-.02em;font-style:normal;margin-top:30px}.visit-actions{display:flex;gap:24px;flex-wrap:wrap;margin-top:28px}.text-link{display:inline-flex;align-items:center;gap:10px;padding:10px 0;min-height:44px;text-decoration:none;border-bottom:1px solid #82704b;font-size:12px;font-weight:600}.text-link svg{width:15px;height:15px;color:var(--brass)}.text-link:hover{color:var(--brass-light)}.hours-panel{border-top:1px solid var(--rule);padding-top:28px;margin-top:5px}.hours-panel h3{font-family:var(--sans);font-size:10px;letter-spacing:.17em;text-transform:uppercase;font-weight:600;color:var(--brass);margin-bottom:24px}.hours-row{display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center;padding:22px 0;border-bottom:1px solid var(--rule)}.hours-row strong{font-size:14px;font-weight:600}.hours-row span{font-size:12px;line-height:1.8;color:var(--muted);text-align:right}.closing{padding:76px 0 68px;text-align:center;background:var(--ink-soft)}.closing h2{font-size:clamp(62px,7vw,100px);margin:14px 0 30px}.closing .booking-pair{max-width:430px;margin-inline:auto}.footer{padding:28px 0 120px;background:var(--ink-soft)}.footer-inner{border-top:1px solid var(--rule);padding-top:24px;display:flex;align-items:center;justify-content:space-between;gap:20px;font-size:10px;color:var(--muted)}.footer a{text-decoration:none}.footer-brand{letter-spacing:.12em;text-transform:uppercase}.dock{position:fixed;bottom:0;left:0;right:0;z-index:30;background:var(--paper);color:var(--ink);border-top:1px solid #c4b697;padding:12px 24px max(12px,env(safe-area-inset-bottom));transform:translateY(110%);visibility:hidden;transition:transform .22s,visibility .22s;box-shadow:0 -6px 24px #0002}.dock[data-visible='true']{transform:none;visibility:visible}.dock-inner{width:min(1200px,100%);margin:auto;display:flex;gap:30px;align-items:center;justify-content:space-between}.dock-label{font-family:var(--serif);font-size:25px;line-height:1.2}.dock-label small{font:9px/1.5 var(--sans);display:block;letter-spacing:.1em;color:var(--dark-muted);margin-top:3px}.dock .booking-pair{width:380px}.dock .button{min-height:44px;padding:10px 14px;font-size:11px}.dock .button.secondary{border-color:#67715e;color:var(--ink)}.dock .button.secondary:hover{background:var(--ink);color:var(--paper)}.dock :focus-visible{outline-color:#624b20}.js-ready .hero-copy{animation:arrive .65s both}.js-ready .hero-art{animation:arrive .8s both}@keyframes arrive{from{transform:translateY(10px)}to{transform:none}}
+@media(min-width:1500px){.hero-inner{min-height:710px}}@media(max-width:1100px){.hero-inner{gap:24px;min-height:610px}.hero-logo{width:290px}.hero-art{min-height:330px}.pw.l{left:-4px}.pw.r{right:-4px}.hero h1{font-size:clamp(78px,10vw,120px)}.nav{gap:22px}.barber-card{padding:26px}.visit-grid{gap:44px}}
+@media(max-width:760px){:root{--space:24px}.header-inner{min-height:82px;gap:18px}.wordmark{font-size:14px;letter-spacing:.15em}.wordmark small{font-size:6px;letter-spacing:.17em}.nav{gap:20px}.nav a{font-size:10px}.nav .nav-book{display:none}.hero-inner{display:flex;flex-direction:column-reverse;align-items:stretch;min-height:0;padding-top:20px;padding-bottom:38px;gap:20px}.hero-art{min-height:0;height:155px;width:100%;max-width:300px;align-self:center}.hero-logo{width:155px;height:155px}.logo-caption{display:none}.pw{top:21px}.pole{height:84px;width:9px}.cap{width:14px;height:5px}.pw.l{left:8px}.pw.r{right:8px}.hero-copy{text-align:center}.hero .eyebrow{font-size:8px;letter-spacing:.17em}.hero h1{font-size:clamp(66px,13vw,94px);margin-top:17px}.hero-description{font-size:13px;max-width:30ch;margin:21px auto 0}.hero .booking-pair{margin:24px auto 0;width:100%}.button{padding:14px 12px;font-size:11px;min-height:52px}.hero-note{font-size:9px}.hero-base{padding-block:16px;justify-content:center}.hero-base>p{display:none}.section{padding-block:64px}.section-header{display:block;margin-bottom:30px}.section-header>p{margin-top:18px;font-size:12px;max-width:40ch}.section-header h2{margin-top:12px}.crew{grid-template-columns:1fr;gap:20px}.barber-card{padding:26px}.barber-top{margin-bottom:20px}.barber-top h3{font-size:33px}.barber-hours{font-size:12px}.menu thead th{font-size:9px;padding:20px 8px;letter-spacing:.04em}.menu th[scope='row']{width:60%;padding-right:8px}.menu td{font-size:23px;width:20%;padding:16px 8px}.service-name{font-size:12px}.service-detail{font-size:10px}.not-offered{font-size:9px}.menu .group th{padding-top:28px}.menu-foot{display:block}.menu-foot a{display:inline-block;margin-top:18px;padding:10px 0;min-height:44px}.visit-grid{grid-template-columns:1fr;gap:44px}.visit-actions{gap:20px}.hours-panel{padding-top:24px}.address{font-size:36px}.closing{padding:60px 0}.footer-inner{flex-direction:column;text-align:center;gap:12px}.footer-brand{font-size:9px}.footer{padding-top:0;padding-bottom:112px}.dock{padding:10px 18px max(10px,env(safe-area-inset-bottom))}.dock-label{display:none}.dock .booking-pair{width:100%}.dock .button{min-height:48px;font-size:11px}}
+@media(max-width:359px){:root{--space:18px}.nav{gap:13px}.nav a{font-size:9px}.wordmark{font-size:12px}.wordmark small{font-size:5.5px}.hero h1{font-size:60px}.hero-art{height:130px}.hero-logo{width:130px;height:130px}.barber-card{padding:22px}.barber-top{gap:14px}.barber-top h3{font-size:28px}.button{font-size:10px;padding-inline:8px}.button .arrow{display:none}.menu td{font-size:21px}.service-name{font-size:11px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.hero-copy,.hero-art{transform:none!important}}@media print{.site-header,.hero-art,.hero-base,.dock,.closing,.footer,.barber-actions,.barber-footer,.visit-actions{display:none!important}body,.barbers,.services{background:white!important;color:black!important}.wrap{width:100%}.section{padding:24px 0}.hero-inner{display:block;min-height:0;padding:0}.hero h1{font-size:40px}.hero .booking-pair{display:none}.crew,.visit-grid{display:block}.barber-card{break-inside:avoid;margin-bottom:16px}.eyebrow,.muted,.role,.barber-hours,.section-header>p,.hours-row span{color:#333!important}.hero-description{color:#333}.menu td,.menu th{color:black!important}}
 </style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "HairSalon", "@id": "https://hometownmensgroominglounge.com/#stilwell", "name": "Hometown Men's Grooming Lounge", "url": "https://hometownmensgroominglounge.com/", "description": "Cuts, beards and straight razor shaves in Stilwell, Oklahoma. View services and prices. Book with Adam Phillips or Nick Wallen through Squire.", "image": "https://hometownmensgroominglounge.com/og-cover.png", "telephone": "+19185070760", "address": {"@type": "PostalAddress", "streetAddress": "110 West Maple", "addressLocality": "Stilwell", "addressRegion": "OK", "addressCountry": "US"}, "employee": [{"@type": "Person", "name": "Adam Phillips", "jobTitle": "Owner & Barber", "sameAs": "https://www.instagram.com/thebarber.ap/"}, {"@type": "Person", "name": "Nick Wallen", "jobTitle": "Barber", "sameAs": "https://www.instagram.com/nickyb_the_barber/"}], "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": "Monday", "opens": "09:00", "closes": "18:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": "Tuesday", "opens": "09:00", "closes": "18:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": "Wednesday", "opens": "09:00", "closes": "18:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday", "opens": "09:00", "closes": "18:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "09:00", "closes": "18:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "18:00"}], "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Services", "itemListElement": [{"@type": "OfferCatalog", "name": "Adam Phillips", "itemListElement": [{"@type": "Offer", "price": 35, "priceCurrency": "USD", "url": "https://getsquire.com/booking/book/thebarber-ap-stilwell/barber/adam-phillips/services", "itemOffered": {"@type": "Service", "name": "Haircut"}}, {"@type": "Offer", "price": 30, "priceCurrency": "USD", "url": "https://getsquire.com/booking/book/thebarber-ap-stilwell/barber/adam-phillips/services", "itemOffered": {"@type": "Service", "name": "Kids Haircut"}}, {"@type": "Offer", "price": 30, "priceCurrency": "USD", "url": "https://getsquire.com/booking/book/thebarber-ap-stilwell/barber/adam-phillips/services", "itemOffered": {"@type": "Service", "name": "1st Responder / Veteran Cut"}}, {"@type": "Offer", "price": 25, "priceCurrency": "USD", "url": "https://getsquire.com/booking/book/thebarber-ap-stilwell/barber/adam-phillips/services", "itemOffered": {"@type": "Service", "name": "Senior Haircut"}}, {"@type": "Offer", "price": 10, "priceCurrency": "USD", "url": "https://getsquire.com/booking/book/thebarber-ap-stilwell/barber/adam-phillips/services", "itemOffered": {"@type": "Service", "name": "Beard Lineup"}}, {"@type": "Offer", "price": 20, "priceCurrency": "USD", "url": "https://getsquire.com/booking/book/thebarber-ap-stilwell/barber/adam-phillips/services", "itemOffered": {"@type": "Service", "name": "Advanced Beard Trim"}}, {"@type": "Offer", "price": 25, "priceCurrency": "USD", "url": "https://getsquire.com/booking/book/thebarber-ap-stilwell/barber/adam-phillips/services", "itemOffered": {"@type": "Service", "name": "Face Shave"}}, {"@type": "Offer", "price": 20, "priceCurrency": "USD", "url": "https://getsquire.com/booking/book/thebarber-ap-stilwell/barber/adam-phillips/services", "itemOffered": {"@type": "Service", "name": "Head Shave"}}, {"@type": "Offer", "price": 65, "priceCurrency": "USD", "url": "https://getsquire.com/booking/book/thebarber-ap-stilwell/barber/adam-phillips/services", "itemOffered": {"@type": "Service", "name": "VIP"}}, {"@type": "Offer", "price": 5, "priceCurrency": "USD", "url": "https://getsquire.com/booking/book/thebarber-ap-stilwell/barber/adam-phillips/services", "itemOffered": {"@type": "Service", "name": "Designs"}}]}, {"@type": "OfferCatalog", "name": "Nick Wallen", "itemListElement": [{"@type": "Offer", "price": 35, "priceCurrency": "USD", "url": "https://getsquire.com/booking/book/thebarber-ap-stilwell/barber/nick-620/services", "itemOffered": {"@type": "Service", "name": "Haircut"}}, {"@type": "Offer", "price": 30, "priceCurrency": "USD", "url": "https://getsquire.com/booking/book/thebarber-ap-stilwell/barber/nick-620/services", "itemOffered": {"@type": "Service", "name": "Kids Haircut"}}, {"@type": "Offer", "price": 30, "priceCurrency": "USD", "url": "https://getsquire.com/booking/book/thebarber-ap-stilwell/barber/nick-620/services", "itemOffered": {"@type": "Service", "name": "1st Responder / Veteran Cut"}}, {"@type": "Offer", "price": 25, "priceCurrency": "USD", "url": "https://getsquire.com/booking/book/thebarber-ap-stilwell/barber/nick-620/services", "itemOffered": {"@type": "Service", "name": "Senior Haircut"}}, {"@type": "Offer", "price": 10, "priceCurrency": "USD", "url": "https://getsquire.com/booking/book/thebarber-ap-stilwell/barber/nick-620/services", "itemOffered": {"@type": "Service", "name": "Beard Lineup"}}, {"@type": "Offer", "price": 25, "priceCurrency": "USD", "url": "https://getsquire.com/booking/book/thebarber-ap-stilwell/barber/nick-620/services", "itemOffered": {"@type": "Service", "name": "Face Shave"}}, {"@type": "Offer", "price": 25, "priceCurrency": "USD", "url": "https://getsquire.com/booking/book/thebarber-ap-stilwell/barber/nick-620/services", "itemOffered": {"@type": "Service", "name": "Head Shave"}}, {"@type": "Offer", "price": 5, "priceCurrency": "USD", "url": "https://getsquire.com/booking/book/thebarber-ap-stilwell/barber/nick-620/services", "itemOffered": {"@type": "Service", "name": "Designs"}}]}]}}</script>
 </head>
-
-<body>
-
-<!-- ======================= HERO ======================= -->
-<div class="hero">
-  <div class="glow"></div>
-  <div class="poles" aria-hidden="true">
-    <div class="pw l"><div class="cap"></div><div class="pole"><i></i><b></b></div><div class="cap"></div></div>
-    <div class="pw r"><div class="cap"></div><div class="pole"><i></i><b></b></div><div class="cap"></div></div>
-  </div>
-
-  <div class="mark" role="img" aria-label="Hometown Men's Grooming Lounge"></div>
-  <div class="kick h-kick">Look Good · Feel Confident · Stay Local</div>
-
-  <h1><span class="chrome">Stilwell's barbershop.</span><br><em>Book in two taps.</em></h1>
-  <p class="h-sub">Cuts, beards and straight razor shaves. Two chairs, six days a week.</p>
-
-  <div class="pick">Pick your barber</div>
-
-  <div class="hb">
-    <!-- ADAM_BOOKING -->
-    <a class="b b-gold" href="https://getsquire.com/booking/book/thebarber-ap-stilwell/barber/adam-phillips/services" target="_blank" rel="noopener">
-      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"><path d="M8 2v4M16 2v4M3 9h18"/><rect x="3" y="5" width="18" height="16" rx="2.5"/></svg>
-      Book AP
-    </a>
-    <!-- NICK_BOOKING -->
-    <a class="b b-red" href="https://getsquire.com/booking/book/thebarber-ap-stilwell/barber/nick-620/services" target="_blank" rel="noopener">
-      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"><path d="M8 2v4M16 2v4M3 9h18"/><rect x="3" y="5" width="18" height="16" rx="2.5"/></svg>
-      Book Nick Wallen
-    </a>
-  </div>
-
-  <div class="scroll-cue"><span></span>Services &amp; Hours</div>
-</div>
-
-<!-- ======================= TICKER ======================= -->
-<div class="tick" aria-hidden="true">
-  <div class="tick-in">
-    <u>Haircuts <s>◆</s> Beard Work <s>◆</s> Straight Razor Shaves <s>◆</s> Walk In Friendly <s>◆</s> 110 West Maple <s>◆</s> Stilwell, Oklahoma <s>◆</s> Two Chairs <s>◆</s> Six Days A Week <s>◆</s></u>
-    <u>Haircuts <s>◆</s> Beard Work <s>◆</s> Straight Razor Shaves <s>◆</s> Walk In Friendly <s>◆</s> 110 West Maple <s>◆</s> Stilwell, Oklahoma <s>◆</s> Two Chairs <s>◆</s> Six Days A Week <s>◆</s></u>
-  </div>
-</div>
-
-<!-- ======================= CREW ======================= -->
-<section class="sec">
-  <div class="w">
-    <div class="sec-h">
-      <div class="kick rv">The Chairs</div>
-      <h2 class="rv"><span class="chrome">Who's cutting</span></h2>
-      <p class="rv">Tap your guy and you'll land straight on his schedule.</p>
-    </div>
-
-    <div class="crew">
-      <article class="c gold rv">
-        <div class="c-top">
-          <div class="badge gold">AP</div>
-          <div>
-            <div class="tag gold">Owner &amp; Barber</div>
-            <h3>Adam Phillips</h3>
-          </div>
-        </div>
-        <div class="days">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></svg>
-          Mon – Fri · 9am – 6pm
-        </div>
-        <div class="c-b">
-          <!-- ADAM_BOOKING -->
-          <a class="b b-gold" href="https://getsquire.com/booking/book/thebarber-ap-stilwell/barber/adam-phillips/services" target="_blank" rel="noopener">Book AP</a>
-          <!-- PHONE_HERE (1 of 2) — AP's line, registered in his name -->
-          <a class="ig" href="tel:+19185070760">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .3 1.9.6 2.8a2 2 0 01-.5 2.1L8.1 9.8a16 16 0 006 6l1.2-1.1a2 2 0 012.1-.5c.9.3 1.8.5 2.8.6a2 2 0 011.8 2z"/></svg>
-            (918) 507-0760
-          </a>
-          <!-- ADAM_IG -->
-          <a class="ig" href="https://www.instagram.com/thebarber.ap/" target="_blank" rel="noopener">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5.2"/><circle cx="12" cy="12" r="4.1"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>
-            @thebarber.ap
-          </a>
-        </div>
-      </article>
-
-      <article class="c nick rv">
-        <div class="c-top">
-          <div class="badge red">NW</div>
-          <div>
-            <div class="tag red">Barber</div>
-            <h3>Nick Wallen</h3>
-          </div>
-        </div>
-        <div class="days">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></svg>
-          Tue – Sat · 9am – 6pm
-        </div>
-        <div class="c-b">
-          <!-- NICK_BOOKING -->
-          <a class="b b-red" href="https://getsquire.com/booking/book/thebarber-ap-stilwell/barber/nick-620/services" target="_blank" rel="noopener">Book Nick Wallen</a>
-          <!-- NICK_IG -->
-          <a class="ig" href="https://www.instagram.com/nickyb_the_barber/" target="_blank" rel="noopener">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5.2"/><circle cx="12" cy="12" r="4.1"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>
-            @nickyb_the_barber
-          </a>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ======================= SERVICES ======================= -->
-<section class="sec">
-  <div class="w">
-    <div class="sec-h">
-      <div class="kick rv">The Menu</div>
-      <h2 class="rv"><span class="chrome">Services</span></h2>
-      <p class="rv">Straight from the book. No surprises at the chair.</p>
-    </div>
-
-    <div class="svc rv">
-      <div><span>Haircut</span><span>$35</span></div>
-      <div><span>Kids Haircut · 12 &amp; under</span><span>$30</span></div>
-      <div><span>Beard Lineup</span><span>$10</span></div>
-      <div><span>Advanced Beard Trim · Adam</span><span>$20</span></div>
-      <div><span>Face Shave</span><span>Adam $25 · Nick $20</span></div>
-      <div><span>Head Shave</span><span>Adam $25 · Nick $35</span></div>
-      <div><span>1st Responder / Veteran</span><span>$30</span></div>
-      <div><span>65yr+ Senior Haircut</span><span>$25</span></div>
-      <div><span>VIP · Adam</span><span>$65</span></div>
-      <div><span>Designs</span><span>$5</span></div>
-    </div>
-    <p class="svc-n rv">Exact pricing confirmed on each barber's Squire page at booking.</p>
-  </div>
-</section>
-
-<!-- ======================= VISIT ======================= -->
-<section class="sec">
-  <div class="w">
-    <div class="sec-h">
-      <div class="kick rv">Find Us</div>
-      <h2 class="rv"><span class="chrome">Come see us</span></h2>
-    </div>
-
-    <div class="visit">
-      <div class="box rv">
-        <h3>The Shop</h3>
-        <div class="addr">110 West Maple<br>Stilwell, Oklahoma</div>
-        <div class="addr-s">Downtown Stilwell, Adair County</div>
-        <div class="c-b">
-          <a class="b b-out" href="https://maps.google.com/?q=110+W+Maple+St+Stilwell+OK" target="_blank" rel="noopener">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0116 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            Directions
-          </a>
-          <!-- PHONE_HERE — live. AT&T business line, registered to Adam Phillips. -->
-          <a class="b b-out" href="tel:+19185070760">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .3 1.9.6 2.8a2 2 0 01-.5 2.1L8.1 9.8a16 16 0 006 6l1.2-1.1a2 2 0 012.1-.5c.9.3 1.8.5 2.8.6a2 2 0 011.8 2z"/></svg>
-            (918) 507-0760
-          </a>
-        </div>
-      </div>
-
-      <div class="box rv">
-        <h3>Hours by Barber</h3>
-        <div class="hr-row"><b>Adam Phillips</b><span>Mon–Fri · 9–6</span></div>
-        <div class="hr-row"><b>Nick Wallen</b><span>Tue–Sat · 9–6</span></div>
-        <p class="hint">Listed per barber on purpose — so nobody drives out Monday looking for Nick.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ======================= CLOSE ======================= -->
-<section class="close">
-  <div class="w">
-    <div class="kick rv">Ready When You Are</div>
-    <h2 class="rv"><span class="chrome">Grab the chair.</span></h2>
-    <div class="hb">
-      <!-- ADAM_BOOKING -->
-      <a class="b b-gold" href="https://getsquire.com/booking/book/thebarber-ap-stilwell/barber/adam-phillips/services" target="_blank" rel="noopener">Book AP</a>
-      <!-- NICK_BOOKING -->
-      <a class="b b-red" href="https://getsquire.com/booking/book/thebarber-ap-stilwell/barber/nick-620/services" target="_blank" rel="noopener">Book Nick Wallen</a>
-    </div>
-    <p class="foot">Hometown Men's Grooming Lounge · 110 West Maple, Stilwell, Oklahoma<br>Booking handled by Squire.</p>
-  </div>
-</section>
-
-<!-- ======================= DOCK ======================= -->
-<div class="dock" id="dock">
-  <!-- ADAM_BOOKING -->
-  <a class="b b-gold" href="https://getsquire.com/booking/book/thebarber-ap-stilwell/barber/adam-phillips/services" target="_blank" rel="noopener">Book AP</a>
-  <!-- NICK_BOOKING -->
-  <a class="b b-red" href="https://getsquire.com/booking/book/thebarber-ap-stilwell/barber/nick-620/services" target="_blank" rel="noopener">Book Nick Wallen</a>
-</div>
-
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"HairSalon",
-  "name":"Hometown Men's Grooming Lounge",
-  "description":"Barbershop in Stilwell, Oklahoma. Cuts, beards and straight razor shaves.",
-  "image":"https://adamphillips24.github.io/hometown-mens-grooming-lounge/og-cover.png",
-  "url":"https://adamphillips24.github.io/hometown-mens-grooming-lounge/",
-  "telephone":"+1-918-507-0760",
-  "address":{"@type":"PostalAddress","streetAddress":"110 West Maple","addressLocality":"Stilwell","addressRegion":"OK","addressCountry":"US"},
-  "openingHoursSpecification":[
-    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},
-    {"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday"],"opens":"09:00","closes":"18:00"}
-  ],
-  "employee":[
-    {"@type":"Person","name":"Adam Phillips","jobTitle":"Owner & Barber"},
-    {"@type":"Person","name":"Nick Wallen","jobTitle":"Barber"}
-  ],
-  "sameAs":["https://www.instagram.com/thebarber.ap/","https://www.instagram.com/nickyb_the_barber/"]
-}
-</script>
-
-<script>
-(function(){
-  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var items = document.querySelectorAll('.rv');
-
-  if (reduce || !('IntersectionObserver' in window)) {
-    for (var i=0;i<items.length;i++) items[i].classList.add('in');
-  } else {
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
-        if (!e.isIntersecting) return;
-        var sibs = Array.prototype.slice.call(e.target.parentNode.children)
-          .filter(function(n){ return n.classList.contains('rv'); });
-        var i = Math.max(0, sibs.indexOf(e.target));
-        e.target.style.transitionDelay = Math.min(i*85, 340) + 'ms';
-        e.target.classList.add('in');
-        io.unobserve(e.target);
-      });
-    }, {rootMargin:'0px 0px -9% 0px', threshold:.12});
-    for (var j=0;j<items.length;j++) io.observe(items[j]);
+<body data-location="stilwell">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="wrap header-inner"><a class="wordmark" href="#top" aria-label="Hometown Men's Grooming Lounge home">HOMETOWN<small>MEN’S GROOMING LOUNGE</small></a><nav class="nav" aria-label="Main navigation"><a href="#barbers">Barbers</a><a href="#services">Services</a><a href="#visit">Visit</a><a class="nav-book" href="#barbers">Book a chair</a></nav></div></header>
+<main id="main">
+<section class="hero" id="top" aria-labelledby="hero-title"><div class="wrap hero-inner"><div class="hero-copy"><p class="eyebrow">LOOK GOOD · FEEL CONFIDENT · STAY LOCAL</p><h1 id="hero-title">Stilwell’s<br><em>barbershop.</em></h1><p class="hero-description">Cuts, beards and straight razor shaves.<br>Two chairs. Six days a week.</p><div class="booking-pair" data-booking-zone><a class="button" href="https://getsquire.com/booking/book/thebarber-ap-stilwell/barber/adam-phillips/services" target="_blank" rel="noopener noreferrer" data-action="booking" data-location="stilwell" data-barber="ap" data-placement="hero">Book AP<span class="sr-only"> (opens in Squire in a new tab)</span></a><a class="button secondary" href="https://getsquire.com/booking/book/thebarber-ap-stilwell/barber/nick-620/services" target="_blank" rel="noopener noreferrer" data-action="booking" data-location="stilwell" data-barber="nick" data-placement="hero">Book Nick Wallen<span class="sr-only"> (opens in Squire in a new tab)</span></a></div><p class="hero-note">Choose your barber. Booking opens in Squire.</p></div><div class="hero-art"><div class="poles" aria-hidden="true"><div class="pw l"><div class="cap"></div><div class="pole"><i></i><b></b></div><div class="cap"></div></div><div class="pw r"><div class="cap"></div><div class="pole"><i></i><b></b></div><div class="cap"></div></div></div><img class="hero-logo" src="logo.avif" width="350" height="350" alt="Hometown Men's Grooming Lounge emblem" fetchpriority="high"><p class="logo-caption">Stilwell, Oklahoma</p></div></div><div class="wrap hero-base"><p>110 West Maple · Stilwell, Oklahoma</p><a class="scroll-link" href="#services">Explore services &amp; prices</a></div></section>
+<section class="section barbers" id="barbers" aria-labelledby="barbers-title"><div class="wrap"><div class="section-header"><div><p class="eyebrow"><span class="section-number">01</span>The chairs</p><h2 id="barbers-title">Who’s cutting.</h2></div><p>Pick your barber.<br>We’ll take you to his booking page.</p></div><div class="crew"><article class="barber-card ap" aria-labelledby="barber-ap">
+<div class="barber-top"><span class="initials" aria-hidden="true">AP</span><div><p class="role">Owner &amp; Barber</p><h3 id="barber-ap">Adam Phillips</h3></div></div>
+<p class="barber-hours"><span>Mon–Fri</span><span>9am–6pm</span></p>
+<div class="barber-actions" data-booking-zone><a class="button" href="https://getsquire.com/booking/book/thebarber-ap-stilwell/barber/adam-phillips/services" target="_blank" rel="noopener noreferrer" data-action="booking" data-location="stilwell" data-barber="ap" data-placement="barber-card">Book AP<span class="sr-only"> (opens in Squire in a new tab)</span></a></div>
+<div class="barber-footer"><a class="social-link" href="tel:+19185070760" data-action="call" data-barber="ap"><svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .3 1.9.6 2.8a2 2 0 01-.5 2.1L8.1 9.8a16 16 0 006 6l1.2-1.1a2 2 0 012.1-.5c.9.3 1.8.5 2.8.6a2 2 0 011.8 2z"/></svg>(918) 507-0760</a><a class="social-link" href="https://www.instagram.com/thebarber.ap/" target="_blank" rel="noopener noreferrer" data-action="instagram" data-barber="ap"><svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5.2"/><circle cx="12" cy="12" r="4.1"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>@thebarber.ap<span class="sr-only"> (opens in a new tab)</span></a></div></article><article class="barber-card nick" aria-labelledby="barber-nick">
+<div class="barber-top"><span class="initials" aria-hidden="true">NW</span><div><p class="role">Barber</p><h3 id="barber-nick">Nick Wallen</h3></div></div>
+<p class="barber-hours"><span>Tue–Sat</span><span>9am–6pm</span></p>
+<div class="barber-actions" data-booking-zone><a class="button secondary" href="https://getsquire.com/booking/book/thebarber-ap-stilwell/barber/nick-620/services" target="_blank" rel="noopener noreferrer" data-action="booking" data-location="stilwell" data-barber="nick" data-placement="barber-card">Book Nick Wallen<span class="sr-only"> (opens in Squire in a new tab)</span></a></div>
+<div class="barber-footer"><a class="social-link" href="https://www.instagram.com/nickyb_the_barber/" target="_blank" rel="noopener noreferrer" data-action="instagram" data-barber="nick"><svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5.2"/><circle cx="12" cy="12" r="4.1"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>@nickyb_the_barber<span class="sr-only"> (opens in a new tab)</span></a></div></article></div></div></section>
+<section class="section services" id="services" aria-labelledby="services-title"><div class="wrap"><div class="section-header"><div><p class="eyebrow"><span class="section-number">02</span>The menu</p><h2 id="services-title">Services &amp; prices.</h2></div><p>Find your service.<br>See each barber’s price.</p></div><div class="menu-wrap"><table class="menu"><caption class="sr-only">Services, appointment durations, and prices in US dollars for each barber at Stilwell.</caption><thead><tr><th scope="col">Service</th><th scope="col">AP</th><th scope="col">Nick Wallen</th></tr></thead><tbody><tr class="group"><th colspan="3" scope="colgroup">Cuts</th></tr><tr data-service="haircut"><th scope="row"><span class="service-name">Haircut</span><span class="service-detail">45 min</span></th><td data-barber="ap" data-price="35">$35</td><td data-barber="nick" data-price="35">$35</td></tr><tr data-service="kids"><th scope="row"><span class="service-name">Kids Haircut</span><span class="service-detail">12 years &amp; under · 45 min</span></th><td data-barber="ap" data-price="30">$30</td><td data-barber="nick" data-price="30">$30</td></tr><tr data-service="responder"><th scope="row"><span class="service-name">1st Responder / Veteran Cut</span><span class="service-detail">45 min</span></th><td data-barber="ap" data-price="30">$30</td><td data-barber="nick" data-price="30">$30</td></tr><tr data-service="senior"><th scope="row"><span class="service-name">Senior Haircut</span><span class="service-detail">65 years &amp; over · 45 min</span></th><td data-barber="ap" data-price="25">$25</td><td data-barber="nick" data-price="25">$25</td></tr><tr class="group"><th colspan="3" scope="colgroup">Beards &amp; shaves</th></tr><tr data-service="lineup"><th scope="row"><span class="service-name">Beard Lineup</span><span class="service-detail">15 min</span></th><td data-barber="ap" data-price="10">$10</td><td data-barber="nick" data-price="10">$10</td></tr><tr data-service="beard"><th scope="row"><span class="service-name">Advanced Beard Trim</span><span class="service-detail">30 min</span></th><td data-barber="ap" data-price="20">$20</td><td data-barber="nick"><span class="not-offered">Not offered</span></td></tr><tr data-service="face"><th scope="row"><span class="service-name">Face Shave</span><span class="service-detail">30 min</span></th><td data-barber="ap" data-price="25">$25</td><td data-barber="nick" data-price="25">$25</td></tr><tr data-service="head"><th scope="row"><span class="service-name">Head Shave</span><span class="service-detail">30 min</span></th><td data-barber="ap" data-price="20">$20</td><td data-barber="nick" data-price="25">$25</td></tr><tr class="group"><th colspan="3" scope="colgroup">Finishing touches</th></tr><tr data-service="vip"><th scope="row"><span class="service-name">VIP</span><span class="service-detail">1 hr 45 min</span></th><td data-barber="ap" data-price="65">$65</td><td data-barber="nick"><span class="not-offered">Not offered</span></td></tr><tr data-service="designs"><th scope="row"><span class="service-name">Designs</span><span class="service-detail">15 min</span></th><td data-barber="ap" data-price="5">$5</td><td data-barber="nick" data-price="5">$5</td></tr></tbody></table></div><div class="menu-foot"><p>Prices and appointment durations are listed from Squire. Your selected barber’s booking page confirms the final details.</p><a href="#barbers">Choose your barber</a></div></div></section>
+<section class="section visit" id="visit" aria-labelledby="visit-title"><div class="wrap visit-grid"><div><p class="eyebrow"><span class="section-number">03</span>Find us</p><h2 id="visit-title">Come see us.</h2><address class="address">110 West Maple<br>Stilwell, Oklahoma</address><div class="visit-actions"><a class="text-link" href="https://maps.google.com/?q=110+W+Maple+St+Stilwell+OK" target="_blank" rel="noopener noreferrer" data-action="directions"><svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0116 0z"/><circle cx="12" cy="10" r="3"/></svg>Get directions<span class="sr-only"> (opens in a new tab)</span></a><a class="text-link" href="tel:+19185070760" data-action="call"><svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .3 1.9.6 2.8a2 2 0 01-.5 2.1L8.1 9.8a16 16 0 006 6l1.2-1.1a2 2 0 012.1-.5c.9.3 1.8.5 2.8.6a2 2 0 011.8 2z"/></svg>(918) 507-0760</a></div></div><div class="hours-panel"><h3>Hours by barber</h3><div class="hours-row"><strong>Adam Phillips</strong><span>Mon–Fri<br>9am–6pm</span></div><div class="hours-row"><strong>Nick Wallen</strong><span>Tue–Sat<br>9am–6pm</span></div></div></div></section>
+<section class="closing" aria-labelledby="closing-title"><div class="wrap"><p class="eyebrow">Ready when you are</p><h2 id="closing-title">Grab the chair.</h2><div class="booking-pair" data-booking-zone><a class="button" href="https://getsquire.com/booking/book/thebarber-ap-stilwell/barber/adam-phillips/services" target="_blank" rel="noopener noreferrer" data-action="booking" data-location="stilwell" data-barber="ap" data-placement="footer">Book AP<span class="sr-only"> (opens in Squire in a new tab)</span></a><a class="button secondary" href="https://getsquire.com/booking/book/thebarber-ap-stilwell/barber/nick-620/services" target="_blank" rel="noopener noreferrer" data-action="booking" data-location="stilwell" data-barber="nick" data-placement="footer">Book Nick Wallen<span class="sr-only"> (opens in Squire in a new tab)</span></a></div></div></section>
+</main>
+<footer class="footer"><div class="wrap footer-inner"><p class="footer-brand">Hometown Men’s Grooming Lounge</p><p>110 West Maple · Stilwell, Oklahoma</p><a href="https://getsquire.com/" target="_blank" rel="noopener noreferrer">Booking by Squire<span class="sr-only"> (opens in a new tab)</span></a></div></footer>
+<aside class="dock" aria-label="Quick booking" aria-hidden="true" inert data-visible="false"><div class="dock-inner"><p class="dock-label">Your next good cut.<small>STILWELL, OKLAHOMA</small></p><div class="booking-pair"><a class="button" href="https://getsquire.com/booking/book/thebarber-ap-stilwell/barber/adam-phillips/services" target="_blank" rel="noopener noreferrer" data-action="booking" data-location="stilwell" data-barber="ap" data-placement="sticky">Book AP<span class="sr-only"> (opens in Squire in a new tab)</span></a><a class="button secondary" href="https://getsquire.com/booking/book/thebarber-ap-stilwell/barber/nick-620/services" target="_blank" rel="noopener noreferrer" data-action="booking" data-location="stilwell" data-barber="nick" data-placement="sticky">Book Nick Wallen<span class="sr-only"> (opens in Squire in a new tab)</span></a></div></div></aside>
+<script>/* Progressive enhancements only: every service and booking link works without JS. */
+(() => {
+  'use strict';
+  document.documentElement.classList.add('js-ready');
+  const dock = document.querySelector('.dock');
+  const directBooking = [...document.querySelectorAll('[data-booking-zone]')];
+  const visibleZones = new Set();
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const setDock = () => {
+    if (!dock) return;
+    const focusedInDock = dock.contains(document.activeElement);
+    const show = !visibleZones.size && window.scrollY > 180;
+    // Keep the control a keyboard user is interacting with in place.
+    if (focusedInDock && !show) return;
+    dock.dataset.visible = String(show);
+    dock.inert = !show;
+    dock.setAttribute('aria-hidden', String(!show));
+  };
+  if (dock && 'IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(entries => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) visibleZones.add(entry.target);
+        else visibleZones.delete(entry.target);
+      }
+      setDock();
+    }, {threshold:0, rootMargin:'0px 0px -100px 0px'});
+    directBooking.forEach(zone => observer.observe(zone));
+    dock.addEventListener('focusout', () => requestAnimationFrame(setDock));
+    // A focused main-page link must never be hidden behind the booking bar.
+    document.addEventListener('focusin', event => {
+      if (dock.contains(event.target) || dock.dataset.visible !== 'true') return;
+      const r = event.target.getBoundingClientRect();
+      const top = dock.getBoundingClientRect().top;
+      if (r.bottom > top && r.top < window.innerHeight) {
+        event.target.scrollIntoView({block:'center', behavior:reduced.matches?'instant':'smooth'});
+      }
+    });
   }
-
-  /* dock appears once the hero's own buttons are gone */
-  var dock = document.getElementById('dock');
-  var hb = document.querySelector('.hero .hb');
-  if (dock && hb && 'IntersectionObserver' in window) {
-    new IntersectionObserver(function(e){
-      dock.classList.toggle('on', !e[0].isIntersecting);
-    }, {threshold:0}).observe(hb);
+  // Highlight the section without intercepting standard anchor navigation.
+  if ('IntersectionObserver' in window) {
+    const sectionObserver = new IntersectionObserver(entries => {
+      for (const entry of entries) {
+        if (!entry.isIntersecting) continue;
+        document.querySelectorAll('.nav a').forEach(link => {
+          if (link.hash === '#' + entry.target.id) link.setAttribute('aria-current','location');
+          else link.removeAttribute('aria-current');
+        });
+      }
+    }, {rootMargin:'-10% 0px -60% 0px'});
+    document.querySelectorAll('main section[id]').forEach(section => sectionObserver.observe(section));
   }
-
-  /* press feedback on every tappable control */
-  if (!reduce && document.body.animate) {
-    document.addEventListener('pointerdown', function(ev){
-      var t = ev.target.closest && ev.target.closest('.b, .ig');
-      if (!t) return;
-      t.animate(
-        [{transform:'scale(1)'},{transform:'scale(.962)'},{transform:'scale(1)'}],
-        {duration:240, easing:'cubic-bezier(.3,1.4,.5,1)'}
-      );
-    }, {passive:true});
-  }
+  // Local event hook for a future analytics adapter. No trackers, cookies, or network calls.
+  document.addEventListener('click', event => {
+    const link = event.target.closest('a[data-action]');
+    if (!link) return;
+    document.dispatchEvent(new CustomEvent('hometown:action', {detail:{
+      action:link.dataset.action, location:link.dataset.location || document.body.dataset.location,
+      barber:link.dataset.barber || null, placement:link.dataset.placement || null
+    }}));
+  });
 })();
 </script>
-
-</body>
-</html>
+</body></html>

@@ -1,0 +1,180 @@
+{
+  "brand": "Hometown Men's Grooming Lounge",
+  "site_url": "https://hometownmensgroominglounge.com/",
+  "active_location": "stilwell",
+  "locations": [
+    {
+      "id": "stilwell",
+      "name": "Stilwell",
+      "status": "open",
+      "address": {
+        "street": "110 West Maple",
+        "city": "Stilwell",
+        "region": "Oklahoma",
+        "region_code": "OK",
+        "country": "US"
+      },
+      "phone": "+19185070760",
+      "phone_display": "(918) 507-0760",
+      "directions_url": "https://maps.google.com/?q=110+W+Maple+St+Stilwell+OK",
+      "timezone": "America/Chicago",
+      "barbers": [
+        "ap",
+        "nick"
+      ]
+    }
+  ],
+  "barbers": [
+    {
+      "id": "ap",
+      "name": "Adam Phillips",
+      "initials": "AP",
+      "role": "Owner & Barber",
+      "book_label": "Book AP",
+      "instagram_handle": "@thebarber.ap",
+      "instagram_url": "https://www.instagram.com/thebarber.ap/",
+      "phone": "+19185070760",
+      "phone_display": "(918) 507-0760"
+    },
+    {
+      "id": "nick",
+      "name": "Nick Wallen",
+      "initials": "NW",
+      "role": "Barber",
+      "book_label": "Book Nick Wallen",
+      "instagram_handle": "@nickyb_the_barber",
+      "instagram_url": "https://www.instagram.com/nickyb_the_barber/"
+    }
+  ],
+  "assignments": [
+    {
+      "location_id": "stilwell",
+      "barber_id": "ap",
+      "booking_url": "https://getsquire.com/booking/book/thebarber-ap-stilwell/barber/adam-phillips/services",
+      "days": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "days_display": "Mon\u2013Fri",
+      "opens": "09:00",
+      "closes": "18:00",
+      "hours_display": "9am\u20136pm"
+    },
+    {
+      "location_id": "stilwell",
+      "barber_id": "nick",
+      "booking_url": "https://getsquire.com/booking/book/thebarber-ap-stilwell/barber/nick-620/services",
+      "days": [
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "days_display": "Tue\u2013Sat",
+      "opens": "09:00",
+      "closes": "18:00",
+      "hours_display": "9am\u20136pm"
+    }
+  ],
+  "services_verified_on": "2026-09-20",
+  "services": [
+    {
+      "id": "haircut",
+      "name": "Haircut",
+      "category": "Cuts",
+      "duration_minutes": 45
+    },
+    {
+      "id": "kids",
+      "name": "Kids Haircut",
+      "detail": "12 years & under",
+      "category": "Cuts",
+      "duration_minutes": 45
+    },
+    {
+      "id": "responder",
+      "name": "1st Responder / Veteran Cut",
+      "category": "Cuts",
+      "duration_minutes": 45
+    },
+    {
+      "id": "senior",
+      "name": "Senior Haircut",
+      "detail": "65 years & over",
+      "category": "Cuts",
+      "duration_minutes": 45
+    },
+    {
+      "id": "lineup",
+      "name": "Beard Lineup",
+      "category": "Beards & shaves",
+      "duration_minutes": 15
+    },
+    {
+      "id": "beard",
+      "name": "Advanced Beard Trim",
+      "category": "Beards & shaves",
+      "duration_minutes": 30
+    },
+    {
+      "id": "face",
+      "name": "Face Shave",
+      "category": "Beards & shaves",
+      "duration_minutes": 30
+    },
+    {
+      "id": "head",
+      "name": "Head Shave",
+      "category": "Beards & shaves",
+      "duration_minutes": 30
+    },
+    {
+      "id": "vip",
+      "name": "VIP",
+      "category": "Finishing touches",
+      "duration_minutes": 105
+    },
+    {
+      "id": "designs",
+      "name": "Designs",
+      "category": "Finishing touches",
+      "duration_minutes": 15
+    }
+  ],
+  "offerings": [
+    {
+      "location_id": "stilwell",
+      "barber_id": "ap",
+      "prices": {
+        "haircut": 35,
+        "kids": 30,
+        "responder": 30,
+        "senior": 25,
+        "lineup": 10,
+        "beard": 20,
+        "face": 25,
+        "head": 20,
+        "vip": 65,
+        "designs": 5
+      }
+    },
+    {
+      "location_id": "stilwell",
+      "barber_id": "nick",
+      "prices": {
+        "haircut": 35,
+        "kids": 30,
+        "responder": 30,
+        "senior": 25,
+        "lineup": 10,
+        "face": 25,
+        "head": 25,
+        "designs": 5
+      }
+    }
+  ]
+}
