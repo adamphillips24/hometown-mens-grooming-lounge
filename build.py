@@ -99,7 +99,7 @@ def render(data):
     day_count = len({day for a in assignments.values() for day in a['days']})
     day_label = {5:'Five',6:'Six',7:'Seven'}.get(day_count,str(day_count))
     description=f"Cuts, beards and straight razor shaves in {loc['address']['city']}, {loc['address']['region']}. View services and prices. Book with {' or '.join(b['name'] for b in crew)} through Squire."
-    schema={'@context':'https://schema.org','@type':'HairSalon','@id':url+'#'+loc['id'],'name':data['brand'],'url':url,'description':description,'image':url+'og-cover.png','telephone':loc['phone'],'address':{'@type':'PostalAddress','streetAddress':loc['address']['street'],'addressLocality':loc['address']['city'],'addressRegion':loc['address']['region_code'],'addressCountry':loc['address']['country']},'employee':[{'@type':'Person','name':b['name'],'jobTitle':b['role'],'sameAs':b['instagram_url']} for b in crew]}
+    schema={'@context':'https://schema.org','@type':'HairSalon','@id':url+'#'+loc['id'],'name':data['brand'],'url':url,'description':description,'image':url+'og-cover.png','logo':url+'favicon.png','telephone':loc['phone'],'address':{'@type':'PostalAddress','streetAddress':loc['address']['street'],'addressLocality':loc['address']['city'],'addressRegion':loc['address']['region_code'],'addressCountry':loc['address']['country']},'employee':[{'@type':'Person','name':b['name'],'jobTitle':b['role'],'sameAs':b['instagram_url']} for b in crew]}
     day_hours={}
     for a in assignments.values():
         for day in a['days']:
@@ -116,7 +116,7 @@ def render(data):
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>{e(title)}</title><meta name="description" content="{e(description)}"><meta name="theme-color" content="#11130f"><meta name="color-scheme" content="dark light"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="hometown-build" content="{build_id}">
-<link rel="canonical" href="{e(url)}"><link rel="icon" href="logo.avif"><link rel="preload" href="logo.avif" as="image" type="image/avif">
+<link rel="canonical" href="{e(url)}"><link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48"><link rel="icon" href="favicon.png" type="image/png" sizes="420x420"><link rel="apple-touch-icon" href="favicon.png"><link rel="preload" href="logo.avif" as="image" type="image/avif">
 <meta property="og:type" content="website"><meta property="og:site_name" content="{e(data['brand'])}"><meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(description)}"><meta property="og:url" content="{e(url)}"><meta property="og:image" content="{e(url)}og-cover.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Hometown Men's Grooming Lounge emblem"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{e(title)}"><meta name="twitter:description" content="{e(description)}"><meta name="twitter:image" content="{e(url)}og-cover.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,500&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
 <style>{css}</style>
